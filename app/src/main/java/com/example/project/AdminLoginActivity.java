@@ -18,4 +18,9 @@ public class AdminLoginActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MainActivity.class);
         startActivityForResult(intent,1);
     }
+    public void onLogin(View view)
+    {
+        Intent intent = new Intent(this, AddingDeletingActivity.class);
+        startActivityForResult(intent,1);
+    }
 }

@@ -6,6 +6,8 @@ package com.example.project;
         import android.content.Intent;
         import android.os.Bundle;
         import android.view.View;
+        import android.widget.Button;
+        import android.widget.TextView;
 
 public class ConfirmActivity extends EventActivity {
 
@@ -24,6 +26,17 @@ public class ConfirmActivity extends EventActivity {
     {
         Intent intent = new Intent(this, LastPageActivity.class);
         startActivityForResult(intent,1);
+    }
+
+    public void emailButton(View view)
+    {
+        Button b = findViewById(R.id.button);
+        TextView tv = findViewById(R.id.textView14);
+        if(view == b)
+        {
+            tv.setText("Mail is sent");
+        }
+
     }
 
 }

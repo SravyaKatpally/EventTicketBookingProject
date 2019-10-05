@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="70dp"
-        android:hint="confirmation number"
+        android:hint="Confirmation number"
         android:textColorHint="@color/colorPrimary" />
 
     <EditText
@@ -82,5 +82,12 @@
         android:layout_marginTop="-50dp"
         android:onClick="onBack"
         android:text="Back" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-550dp"
+        android:textColor="#AA00FF" />
 
 </LinearLayout>

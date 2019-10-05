@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".EventListActivity">
+    tools:context=".AddingDeletingActivity">
 
     <TextView
         android:id="@+id/textView16"
@@ -102,8 +102,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="310dp"
         android:layout_marginTop="-100dp"
-        android:onClick="bookTicket"
-        android:text="Book" />
+        android:onClick="onDelete"
+        android:text="Delete" />
 
     <Button
         android:id="@+id/button5"
@@ -111,23 +111,23 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="310dp"
         android:layout_marginTop="30dp"
-        android:onClick="bookTicket"
-        android:text="Book" />
-
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="100dp"
-        android:text="Similarly,we can add other list of events"
-        android:textSize="18sp" />
+        android:onClick="onDelete"
+        android:text="Delete" />
 
     <Button
-        android:id="@+id/button11"
-        android:layout_width="100dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="90dp"
-        android:onClick="backButton"
-        android:text="BACK BUTTON" />
+        android:id="@+id/button12"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:onClick="onAddEvent"
+        android:text="Add Event" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="100dp"
+        android:text="TextView" />
 
 </LinearLayout>

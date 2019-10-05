@@ -15,6 +15,7 @@
         <activity android:name=".EventActivity" />
         <activity android:name=".LastPageActivity" />
         <activity android:name=".ConfirmActivity" />
+        <activity android:name=".AddingDeletingActivity" />
         <activity android:name=".EventListActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
