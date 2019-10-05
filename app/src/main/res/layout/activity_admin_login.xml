@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:gravity="center"
-        android:hint="Enter Password"
+        android:hint="Enter  Password"
         android:inputType="textPersonName"
 
         android:textSize="18sp"
