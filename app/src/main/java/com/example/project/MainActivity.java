@@ -19,4 +19,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, SignUpActivity.class);
         startActivityForResult(intent,1);
     }
+
+    public void onAdminLogin(View view)
+    {
+        Intent intent = new Intent(this, AdminLoginActivity.class);
+        startActivityForResult(intent,1);
+    }
 }
