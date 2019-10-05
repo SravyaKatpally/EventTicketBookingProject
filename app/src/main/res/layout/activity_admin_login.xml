@@ -75,6 +75,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="44dp"
         android:gravity="center"
+        android:onClick="onAdminBack"
         android:text="BACK"
         android:textSize="24sp"
         android:textStyle="bold"
