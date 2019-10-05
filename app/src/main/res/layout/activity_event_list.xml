@@ -91,6 +91,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="310dp"
         android:layout_marginTop="-100dp"
+        android:onClick="bookTicket"
         android:text="Book" />
 
     <Button
@@ -99,6 +100,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="310dp"
         android:layout_marginTop="30dp"
+        android:onClick="bookTicket"
         android:text="Book" />
 
 </LinearLayout>

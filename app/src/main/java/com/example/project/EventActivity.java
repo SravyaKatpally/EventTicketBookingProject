@@ -2,13 +2,28 @@ package com.example.project;
 
         import androidx.appcompat.app.AppCompatActivity;
 
+        import android.content.Intent;
         import android.os.Bundle;
+        import android.view.View;
 
-public class EventActivity extends AppCompatActivity {
+public class EventActivity extends EventListActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.event_activity);
     }
+
+    public void onConfirm(View view)
+    {
+        Intent intent = new Intent(this, ConfirmActivity.class);
+        startActivityForResult(intent,1);
+    }
+
+    public void onBack(View view)
+    {
+        Intent intent = new Intent(this, EventListActivity.class);
+        startActivityForResult(intent,1);
+    }
+
 }

@@ -78,15 +78,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="170dp"
-        android:text="confirm" />
+        android:layout_marginTop="110dp"
+        android:onClick="onBack"
+        android:text="back page" />
 
     <Button
         android:id="@+id/button10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="300dp"
-        android:layout_marginTop="-50dp"
-        android:text="Back b" />
+        android:layout_marginTop="-100dp"
+        android:onClick="onConfirm"
+        android:text="Confirm" />
 
 </LinearLayout>

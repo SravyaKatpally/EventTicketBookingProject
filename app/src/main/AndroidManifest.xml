@@ -13,7 +13,9 @@
         <activity android:name=".SignUpActivity" />
         <activity android:name=".AdminLoginActivity" />
         <activity android:name=".EventActivity" />
+        <activity android:name=".LastPageActivity" />
         <activity android:name=".ConfirmActivity" />
+        <activity android:name=".EventListActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
