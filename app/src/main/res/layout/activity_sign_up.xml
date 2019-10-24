@@ -114,7 +114,7 @@
         app:layout_constraintVertical_bias="0.054" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/seat1BTN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="onBackClick"

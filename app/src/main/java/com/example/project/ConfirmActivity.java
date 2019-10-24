@@ -9,12 +9,18 @@ package com.example.project;
         import android.widget.Button;
         import android.widget.TextView;
 
+        import java.util.Random;
+        import java.util.concurrent.ThreadLocalRandom;
+
 public class ConfirmActivity extends EventActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.confirm_event);
+        TextView tv = findViewById(R.id.confirmNumTV);
+        Integer c = ThreadLocalRandom.current().nextInt(1000000,1000000000);
+        tv.setText("C" + c.toString());
     }
     public void onBack(View view)
     {
