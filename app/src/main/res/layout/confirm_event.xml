@@ -12,15 +12,6 @@
         android:hint="Confirmation number"
         android:textColorHint="@color/colorPrimary" />
 
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="200dp"
-        android:layout_marginTop="-40dp"
-        android:ems="10"
-        android:inputType="textPersonName" />
-
     <TextView
         android:id="@+id/textView6"
         android:layout_width="150dp"
@@ -89,5 +80,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="-550dp"
         android:textColor="#AA00FF" />
+
+    <TextView
+        android:id="@+id/confirmNumTV"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="19dp"
+        android:text="TextView" />
 
 </LinearLayout>

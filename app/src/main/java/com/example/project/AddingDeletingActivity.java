@@ -25,16 +25,33 @@ public class AddingDeletingActivity extends AdminLoginActivity {
 
     public void onDelete(View view)
     {
+        // Information of first delete
         TextView t1 = findViewById(R.id.textView15);
+        TextView t2 = findViewById(R.id.textView2);
+        TextView t3 = findViewById(R.id.textView);
+        TextView t4 = findViewById(R.id.textView5);
+
+        // Information of second delete
+        TextView t5 = findViewById(R.id.textView7);
+        TextView t6 = findViewById(R.id.textView21);
+        TextView t7 = findViewById(R.id.textView24);
+
         Button b1 = findViewById(R.id.button4);
-        Button b2 = findViewById(R.id.button4);
+        Button b2 = findViewById(R.id.button5);
+
         if(b1 == view )
         {
-            t1.setText("Event gets deleted");
+            t2.setVisibility(view.INVISIBLE);
+            t3.setVisibility(view.INVISIBLE);
+            t4.setVisibility(view.INVISIBLE);
+            b1.setVisibility(view.INVISIBLE);
         }
         if(b2 == view )
         {
-            t1.setText("Event gets deleted");
+            t5.setVisibility(view.INVISIBLE);
+            t6.setVisibility(view.INVISIBLE);
+            t7.setVisibility(view.INVISIBLE);
+            b2.setVisibility(view.INVISIBLE);
         }
 
     }

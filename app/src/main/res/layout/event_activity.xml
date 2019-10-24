@@ -3,21 +3,12 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/editText3"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="250dp"
-        android:layout_marginTop="50dp"
-        android:ems="10"
-        android:inputType="textPersonName" />
-
     <TextView
         android:id="@+id/textView2"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="-25dp"
+        android:layout_marginTop="70dp"
         android:hint="No.of available tickets"
         android:textColorHint="@color/colorPrimary" />
 
@@ -26,69 +17,59 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="100dp"
-        android:hint="Book Ticket"
+        android:layout_marginTop="80dp"
+        android:text="Select Number of Tickets"
         android:textColorHint="@color/colorPrimary" />
 
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/numTicketsTV"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="300dp"
-        android:layout_marginTop="-30dp"
-        android:text="seat 1" />
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="-130dp"
+        android:ems="10"
+        android:text="50" />
 
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="300dp"
-        android:layout_marginTop="5dp"
-        android:text="seat 2" />
-
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="300dp"
-        android:text="seat 3" />
+    <TextView
+        android:id="@+id/bookedTV"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="170dp"
+        android:text="Displays num of tickets" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="-29dp"
         android:hint="No.of tickets booked"
-        android:textColorHint="@color/colorPrimary" />
-
-    <EditText
-        android:id="@+id/editText4"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="250dp"
-        android:layout_marginTop="-40dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
         android:textColorHint="@color/colorPrimary" />
 
     <Button
         android:id="@+id/button9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="110dp"
+        android:layout_marginTop="238dp"
         android:onClick="onBack"
         android:text="back page" />
 
     <Button
-        android:id="@+id/button10"
+        android:id="@+id/confirmBTN"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="300dp"
-        android:layout_marginTop="-100dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="-180dp"
         android:onClick="onConfirm"
         android:text="Confirm" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="190dp"
+        android:layout_marginTop="-276dp" />
 
 </LinearLayout>
