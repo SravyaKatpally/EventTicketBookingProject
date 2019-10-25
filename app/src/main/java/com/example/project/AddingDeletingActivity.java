@@ -9,6 +9,8 @@ package com.example.project;
         import android.widget.Button;
         import android.widget.TextView;
 
+        import java.util.ArrayList;
+
 public class AddingDeletingActivity extends AdminLoginActivity {
 
     @Override
@@ -21,6 +23,8 @@ public class AddingDeletingActivity extends AdminLoginActivity {
     {
         Intent intent = new Intent(this, AddEventActivity.class);
         startActivityForResult(intent,1);
+
+
     }
 
     public void onDelete(View view)
@@ -53,7 +57,17 @@ public class AddingDeletingActivity extends AdminLoginActivity {
             t7.setVisibility(view.INVISIBLE);
             b2.setVisibility(view.INVISIBLE);
         }
-
     }
 
+   /* ArrayList<String> myList = (ArrayList<String>) getIntent().getSerializableExtra("mylist");
+
+    public void onActivityResult(int requestCode, int resultCode, Intent data)
+    {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(resultCode == 1)
+        {
+            TextView textview22 = findViewById(R.id.textView22);
+            textview22.setText("hello");
+        }
+    }*/
 }
