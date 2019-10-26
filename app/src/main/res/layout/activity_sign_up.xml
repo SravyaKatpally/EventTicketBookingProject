@@ -89,6 +89,7 @@
         android:id="@+id/button5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="signup"
         android:text="SIGN UP"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

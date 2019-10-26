@@ -130,4 +130,42 @@
         android:layout_marginTop="100dp"
         android:text="TextView" />
 
+    <TextView
+        android:id="@+id/textView22"
+
+        android:layout_width="97dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="-380dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="-20dp"
+        android:text="TextView" />
+
+    <Button
+        android:id="@+id/button6"
+
+        android:layout_width="80dp"
+        android:layout_height="38dp"
+        android:layout_marginLeft="310dp"
+        android:layout_marginTop="-20dp"
+        android:onClick="onDelete"
+        android:text="Delete"
+
+        />
+
+    <TextView
+        android:id="@+id/textView20"
+
+        android:layout_width="80dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="-35dp"
+        android:text="TextView" />
+
 </LinearLayout>
