@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/nwu"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/textView2"
@@ -19,7 +21,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="80dp"
         android:text="Select Number of Tickets"
-        android:textColorHint="@color/colorPrimary" />
+        android:textColorHint="?attr/actionMenuTextColor" />
 
     <TextView
         android:id="@+id/adminusernameET"
@@ -36,7 +38,8 @@
         android:layout_height="30dp"
         android:layout_marginLeft="220dp"
         android:layout_marginTop="170dp"
-        android:text="Displays num of tickets" />
+        android:text="Displays num of tickets"
+        android:textColorHint="?attr/actionMenuTextColor" />
 
     <TextView
         android:id="@+id/textView4"
@@ -45,7 +48,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="-29dp"
         android:hint="No.of tickets booked"
-        android:textColorHint="@color/colorPrimary" />
+        android:textColorHint="?attr/actionMenuTextColor" />
 
     <Button
         android:id="@+id/button9"
