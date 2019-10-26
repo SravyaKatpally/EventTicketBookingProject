@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         EditText username = (EditText)findViewById(R.id.userET);
         EditText password = (EditText)findViewById(R.id.passwordET);
 
-        if(username.getText().toString().equals("user1") && password.getText().toString().equals("1234")||
+        if(username.getText().toString().equals("user1") && password.getText().toString().equals("1111")||
                 username.getText().toString().equals("user2") && password.getText().toString().equals("9999"))
         {
             Toast.makeText(getApplicationContext(),

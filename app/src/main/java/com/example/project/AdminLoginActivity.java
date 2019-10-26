@@ -35,8 +35,8 @@ public class AdminLoginActivity extends AppCompatActivity {
         EditText username = (EditText)findViewById(R.id.adminusernameET);
         EditText password = (EditText)findViewById(R.id.adminpasswordET);
 
-        if(username.getText().toString().equals("abcd") && password.getText().toString().equals("1234")||
-                username.getText().toString().equals("xyz") && password.getText().toString().equals("9999"))
+        if(username.getText().toString().equals("abc") && password.getText().toString().equals("123")||
+                username.getText().toString().equals("xyz") && password.getText().toString().equals("999"))
         {
             Toast.makeText(getApplicationContext(),
                     "Successfully logged in",Toast.LENGTH_SHORT).show();
