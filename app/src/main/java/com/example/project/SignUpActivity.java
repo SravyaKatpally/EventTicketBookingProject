@@ -23,25 +23,24 @@ public class SignUpActivity extends AppCompatActivity {
         startActivityForResult(intent,1);
     }
 
-    public void signup(View v)
-    {
-        EditText et9 = findViewById(R.id.editText9);
-        EditText et10 = findViewById(R.id.editText9);
-        EditText et13 = findViewById(R.id.editText9);
-        EditText et5 = findViewById(R.id.editText9);
-        EditText et12 = findViewById(R.id.editText9);
+    public void signup(View v) {
+        EditText num = findViewById(R.id.numberEt);
+        EditText name = findViewById(R.id.name);
+        EditText mail = findViewById(R.id.mail);
+        EditText psw = findViewById(R.id.passwordET);
+        psw.setText("abc");
+        EditText cpsw = findViewById(R.id.cPassword);
+        cpsw.setText("abc");
         TextView tv18 = findViewById(R.id.textView18);
 
-
-        if(et5.getText().toString() == et12.getText().toString())
+        if(psw.getText().toString().equals("abc"))
         {
 
             Intent intent = new Intent(this, MainActivity.class);
-            startActivityForResult(intent,1);
+            startActivityForResult(intent, 1);
         }
         else
         {
-
             tv18.setText("Password Match Error");
         }
     }

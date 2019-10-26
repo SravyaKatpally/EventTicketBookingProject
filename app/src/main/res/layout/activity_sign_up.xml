@@ -7,7 +7,7 @@
     tools:context=".SignUpActivity">
 
     <EditText
-        android:id="@+id/editText13"
+        android:id="@+id/numberEt"
         android:layout_width="218dp"
         android:layout_height="52dp"
         android:ems="10"
@@ -23,7 +23,7 @@
         app:layout_constraintVertical_bias="0.375" />
 
     <EditText
-        android:id="@+id/editText9"
+        android:id="@+id/name"
         android:layout_width="224dp"
         android:layout_height="50dp"
         android:ems="10"
@@ -39,7 +39,7 @@
         app:layout_constraintVertical_bias="0.176" />
 
     <EditText
-        android:id="@+id/editText10"
+        android:id="@+id/mail"
         android:layout_width="217dp"
         android:layout_height="52dp"
         android:ems="10"
@@ -54,7 +54,7 @@
         app:layout_constraintVertical_bias="0.274" />
 
     <EditText
-        android:id="@+id/editText5"
+        android:id="@+id/passwordET"
         android:layout_width="224dp"
         android:layout_height="52dp"
         android:ems="10"
@@ -70,7 +70,7 @@
         app:layout_constraintVertical_bias="0.474" />
 
     <EditText
-        android:id="@+id/editText12"
+        android:id="@+id/cPassword"
         android:layout_width="220dp"
         android:layout_height="50dp"
         android:ems="10"
@@ -130,8 +130,8 @@
 
     <TextView
         android:id="@+id/textView18"
-        android:layout_width="108dp"
-        android:layout_height="50dp"
+        android:layout_width="153dp"
+        android:layout_height="44dp"
         android:text="TextView"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
