@@ -32,4 +32,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, AdminLoginActivity.class);
         startActivityForResult(intent,1);
     }
+
+
+
 }

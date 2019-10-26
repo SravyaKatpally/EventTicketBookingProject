@@ -7,7 +7,7 @@
     tools:context=".AdminLoginActivity">
 
     <EditText
-        android:id="@+id/numTicketsTV"
+        android:id="@+id/adminusernameET"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -23,7 +23,7 @@
         app:layout_constraintVertical_bias="0.163" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/adminpasswordET"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
