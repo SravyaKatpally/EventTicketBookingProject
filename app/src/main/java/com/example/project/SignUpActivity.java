@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class SignUpActivity extends AppCompatActivity {
 
@@ -28,20 +29,22 @@ public class SignUpActivity extends AppCompatActivity {
         EditText name = findViewById(R.id.name);
         EditText mail = findViewById(R.id.mail);
         EditText psw = findViewById(R.id.passwordET);
-        psw.setText("abc");
         EditText cpsw = findViewById(R.id.cPassword);
-        cpsw.setText("abc");
         TextView tv18 = findViewById(R.id.textView18);
 
-        if(psw.getText().toString().equals("abc"))
-        {
+        if (!name.getText().toString().isEmpty()) {
+            if (psw.getText().toString().equals("abc") && cpsw.getText().toString().equals("abc")) {
+                Toast.makeText(getApplicationContext(),
+                        "SignUp Successful", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(this, MainActivity.class);
+                startActivityForResult(intent, 1);
+            } else {
 
-            Intent intent = new Intent(this, MainActivity.class);
-            startActivityForResult(intent, 1);
-        }
-        else
-        {
-            tv18.setText("Password Match Error");
+                Toast.makeText(getApplicationContext(), "Enter Valid Credentials", Toast.LENGTH_SHORT).show();
+            }
+        } else {
+            Toast.makeText(getApplicationContext(),
+                    "Enter all the Fields", Toast.LENGTH_SHORT).show();
         }
     }
 }

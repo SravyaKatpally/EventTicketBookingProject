@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?attr/actionModeBackground"
     tools:context=".SignUpActivity">
 
     <EditText
@@ -77,6 +78,7 @@
         android:gravity="center"
         android:hint="Confirm Password"
         android:inputType="textPassword"
+        android:textColor="?attr/actionMenuTextColor"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
