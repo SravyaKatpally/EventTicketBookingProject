@@ -22,7 +22,7 @@
         android:textColorHint="@color/colorPrimary" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/passwordET"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="250dp"
