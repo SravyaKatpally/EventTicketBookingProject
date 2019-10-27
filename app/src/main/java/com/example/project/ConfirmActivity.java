@@ -33,8 +33,8 @@ public class ConfirmActivity extends EventActivity {
 
     public void emailButton(View view)
     {
-        Button b = findViewById(R.id.button);
-        TextView tv = findViewById(R.id.displayTV);
+        Button b = findViewById(R.id.bookBTN);
+        TextView tv = findViewById(R.id.emailTV);
         if(view == b)
         {
             tv.setText("Mail is sent");
