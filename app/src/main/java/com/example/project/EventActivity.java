@@ -49,8 +49,6 @@ public class EventActivity extends AppCompatActivity {
                 Integer c = Integer.parseInt(numOfTickets.getText().toString());
                 Integer a = oo - c;
                 numTicket.setText(a.toString());
-
-
             }
 
             @Override
@@ -70,8 +68,6 @@ public class EventActivity extends AppCompatActivity {
         Intent intent = new Intent(this, EventListActivity.class);
         startActivityForResult(intent, 1);
     }
-
-
 
     public void onActivityResult(int requestCode, int resultCode, Intent data)
     {

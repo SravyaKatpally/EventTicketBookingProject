@@ -20,15 +20,10 @@ public class EventListActivity extends EventActivity {
     {
         Intent intent = new Intent(this, EventActivity.class);
         startActivityForResult(intent,1);
-        //  Button b1 = findViewById(R.id.firstBTN);
-        //   Button b2 = findViewById(R.id.secondBTN);
-
-
     }
 
     public void backButton(View v)
     {
-
         Intent intent = new Intent(this, MainActivity.class);
         startActivityForResult(intent,1);
     }
