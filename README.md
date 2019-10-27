@@ -17,6 +17,7 @@
 - Display all the events(Time and Date)
 - Displaying the number of tickets which user can book
 - Tickets Confirmation
+
 ##Admin
 - Login page
 - Adding events
