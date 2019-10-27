@@ -121,7 +121,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="200dp"
-        android:onClick="onAddEvent"
+        android:onClick="onaddEvent"
         android:text="Add Event" />
 
     <TextView
@@ -132,7 +132,7 @@
         android:text="TextView" />
 
     <TextView
-        android:id="@+id/textView22"
+        android:id="@+id/nameTV"
 
         android:layout_width="97dp"
         android:layout_height="wrap_content"
@@ -141,11 +141,11 @@
         android:text="TextView" />
 
     <TextView
-        android:id="@+id/textView25"
+        android:id="@+id/timeTV"
         android:layout_width="80dp"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:layout_marginLeft="220dp"
-        android:layout_marginTop="-20dp"
+        android:layout_marginTop="-10dp"
         android:text="TextView" />
 
     <Button
@@ -161,12 +161,12 @@
         />
 
     <TextView
-        android:id="@+id/textView20"
+        android:id="@+id/dateTV"
 
         android:layout_width="80dp"
         android:layout_height="20dp"
         android:layout_marginLeft="120dp"
-        android:layout_marginTop="-35dp"
+        android:layout_marginTop="-45dp"
         android:text="TextView" />
 
 </LinearLayout>
