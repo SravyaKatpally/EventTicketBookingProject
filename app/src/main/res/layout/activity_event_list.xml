@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?attr/actionModeBackground"
     android:orientation="vertical"
     tools:context=".EventListActivity">
 
@@ -98,7 +97,7 @@
         android:text="12 AM" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/firstBTN"
         android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="310dp"
@@ -107,7 +106,7 @@
         android:text="Book" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/secondBTN"
         android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="310dp"
