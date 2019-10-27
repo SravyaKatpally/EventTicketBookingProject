@@ -1,16 +1,13 @@
 
 package com.example.project;
 
-        import androidx.appcompat.app.AppCompatActivity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
-        import android.content.Intent;
-        import android.os.Bundle;
-        import android.view.View;
-        import android.widget.Button;
-        import android.widget.TextView;
-
-        import java.util.Random;
-        import java.util.concurrent.ThreadLocalRandom;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class ConfirmActivity extends EventActivity {
 
@@ -37,7 +34,7 @@ public class ConfirmActivity extends EventActivity {
     public void emailButton(View view)
     {
         Button b = findViewById(R.id.button);
-        TextView tv = findViewById(R.id.textView14);
+        TextView tv = findViewById(R.id.displayTV);
         if(view == b)
         {
             tv.setText("Mail is sent");
