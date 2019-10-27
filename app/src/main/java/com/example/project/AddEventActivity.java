@@ -21,13 +21,7 @@ public class AddEventActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_event);
     }
-
-    public void onConfirm(View view)
-    {
-        //     Intent intent = new Intent(this, MainActivity.class);
-        //intent.putExtra("mylist", list);
-        //   startActivityForResult(intent,1);
-    }
+    
 
     public void onClick(View view)
     {
@@ -52,31 +46,8 @@ public class AddEventActivity extends AppCompatActivity {
 
         String main = name1 +" "+date1 +" "+time1;
 
-
         Intent i = new Intent();
         i.putExtra("NAME1",main);
-        setResult(AddingDeletingActivity.NAME1,i);
-
-        finish();
-    }
-
-    public void addEventDate(View v)
-    {
-        TextView et = findViewById(R.id.dateTV);
-        String name1 = et.getText().toString();
-        Intent i = new Intent();
-        i.putExtra("DATE1",name1);
-        setResult(AddingDeletingActivity.NAME1,i);
-
-        finish();
-    }
-
-    public void addEventTime(View v)
-    {
-        TextView et = findViewById(R.id.timeTV);
-        String name1 = et.getText().toString();
-        Intent i = new Intent();
-        i.putExtra("TIME1",name1);
         setResult(AddingDeletingActivity.NAME1,i);
 
         finish();
