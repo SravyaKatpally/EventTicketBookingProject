@@ -79,18 +79,5 @@ public class AddingDeletingActivity extends AdminLoginActivity {
             TextView t2 = findViewById(R.id.timeTV);
             t2.setText(a[2]);
         }
-
-
     }
-   /* ArrayList<String> myList = (ArrayList<String>) getIntent().getSerializableExtra("mylist");
-
-    public void onActivityResult(int requestCode, int resultCode, Intent data)
-    {
-        super.onActivityResult(requestCode, resultCode, data);
-        if(resultCode == 1)
-        {
-            TextView textview22 = findViewById(R.id.textView22);
-            textview22.setText("hello");
-        }
-    }*/
 }
