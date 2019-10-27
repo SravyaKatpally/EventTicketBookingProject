@@ -1,10 +1,10 @@
 # EventTicketBookingProject
 
 ## Team members
-### Sravya Katpally
-### Vinusha Sandadi
-### Sai Sri Dachepalli
-### Sneha Madhavaran
+Sravya Katpally
+Vinusha Sandadi
+Sai Sri Dachepalli
+Sneha Madhavaran
 
 
 ## ABSTRACT
@@ -13,15 +13,15 @@
  
 ## Activities:
 ## User
-### Login and signup page
-### Display all the events(Time and Date)
-### Displaying the number of tickets which user can book
-### Tickets Confirmation
+Login and signup page
+Display all the events(Time and Date)
+Displaying the number of tickets which user can book
+Tickets Confirmation
 ##Admin
-### Login page
-### Adding events
-### Deleting events
+Login page
+Adding events
+Deleting events
 
  
  ## DataBase
- ### In this project, we are using Fire Base where ER diagram is not needed
+ In this project, we are using Fire Base where ER diagram is not needed
