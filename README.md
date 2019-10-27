@@ -18,7 +18,7 @@
 - Displaying the number of tickets which user can book
 - Tickets Confirmation
 
-##Admin
+## Admin
 - Login page
 - Adding events
 - Deleting events
