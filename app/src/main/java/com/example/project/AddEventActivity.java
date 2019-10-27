@@ -10,9 +10,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class AddEventActivity extends AppCompatActivity {
+    public static int NAME1 = 0;
 
     ArrayList<String> list = new ArrayList<String>();
 
@@ -24,35 +24,62 @@ public class AddEventActivity extends AppCompatActivity {
 
     public void onConfirm(View view)
     {
-        Intent intent = new Intent(this, MainActivity.class);
+        //     Intent intent = new Intent(this, MainActivity.class);
         //intent.putExtra("mylist", list);
-        startActivityForResult(intent,1);
+        //   startActivityForResult(intent,1);
     }
 
     public void onClick(View view)
     {
-       /* EditText editText1 = findViewById(R.id.editText2);
-        EditText editText2 = findViewById(R.id.editText4);
-        EditText editText3 = findViewById(R.id.numTicketsTV);
-
-        list.add(1,editText1.getText().toString());
-        list.add(2,editText2.getText().toString());
-        list.add(3,editText3.getText().toString());
-
-        Intent intent = new Intent(this, AddingDeletingActivity.class);
-       // intent.putExtra("mylist", list);
-        startActivityForResult(intent,1);
-*/
-
-
         TextView t1 = findViewById(R.id.textView17);
-        Button b1 = findViewById(R.id.button) ;
+        Button b1 = findViewById(R.id.confirmBTN) ;
         if(view == b1)
         {
             t1.setText(" Confirmed ");
         }
-
     }
 
+    public void addEventClick(View v)
+    {
+        EditText et = findViewById(R.id.eevntNameET);
+        String name1 = et.getText().toString();
+
+        EditText et1 = findViewById(R.id.adminDateET);
+        String date1 = et1.getText().toString();
+
+        EditText et2 = findViewById(R.id.timeET);
+        String time1 = et2.getText().toString();
+
+        String main = name1 +" "+date1 +" "+time1;
+
+
+        Intent i = new Intent();
+        i.putExtra("NAME1",main);
+        setResult(AddingDeletingActivity.NAME1,i);
+
+        finish();
+    }
+
+    public void addEventDate(View v)
+    {
+        TextView et = findViewById(R.id.dateTV);
+        String name1 = et.getText().toString();
+        Intent i = new Intent();
+        i.putExtra("DATE1",name1);
+        setResult(AddingDeletingActivity.NAME1,i);
+
+        finish();
+    }
+
+    public void addEventTime(View v)
+    {
+        TextView et = findViewById(R.id.timeTV);
+        String name1 = et.getText().toString();
+        Intent i = new Intent();
+        i.putExtra("TIME1",name1);
+        setResult(AddingDeletingActivity.NAME1,i);
+
+        finish();
+    }
 
 }
