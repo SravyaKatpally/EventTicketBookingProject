@@ -4,10 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.method.PasswordTransformationMethod;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class AdminLoginActivity extends AppCompatActivity {
@@ -26,9 +24,9 @@ public class AdminLoginActivity extends AppCompatActivity {
     public static final int login = 0;
 
     //public void onLogin(View view) {
-       // Intent intent = new Intent(this, AddingDeletingActivity.class);
-       // startActivityForResult(intent, 1);
-   // }
+    // Intent intent = new Intent(this, AddingDeletingActivity.class);
+    // startActivityForResult(intent, 1);
+    // }
 
     public void onLogin(View v) {
 
@@ -40,7 +38,7 @@ public class AdminLoginActivity extends AppCompatActivity {
         {
             Toast.makeText(getApplicationContext(),
                     "Successfully logged in",Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(this,AddEventActivity.class);
+            Intent intent = new Intent(this,AddingDeletingActivity.class);
             startActivityForResult(intent,login);
         }
         else {
