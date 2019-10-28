@@ -34,6 +34,9 @@ public class AddingDeletingActivity extends AdminLoginActivity {
         TextView t2 = findViewById(R.id.textView2);
         TextView t3 = findViewById(R.id.textView);
         TextView t4 = findViewById(R.id.textView5);
+        TextView nameTV = findViewById(R.id.nameTV);
+        TextView dateTV = findViewById(R.id.dateTV);
+        TextView timeET = findViewById(R.id.timeET);
 
         // Information of second delete
         TextView t5 = findViewById(R.id.textView7);
@@ -42,6 +45,7 @@ public class AddingDeletingActivity extends AdminLoginActivity {
 
         Button b1 = findViewById(R.id.button4);
         Button b2 = findViewById(R.id.button5);
+        Button b3 = findViewById(R.id.button6);
 
         if (b1 == view) {
             t2.setVisibility(view.INVISIBLE);
@@ -54,6 +58,12 @@ public class AddingDeletingActivity extends AdminLoginActivity {
             t6.setVisibility(view.INVISIBLE);
             t7.setVisibility(view.INVISIBLE);
             b2.setVisibility(view.INVISIBLE);
+        }
+        if (b3 == view) {
+            nameTV.setVisibility(view.INVISIBLE);
+            dateTV.setVisibility(view.INVISIBLE);
+            timeET.setVisibility(view.INVISIBLE);
+            b3.setVisibility(view.INVISIBLE);
         }
     }
 

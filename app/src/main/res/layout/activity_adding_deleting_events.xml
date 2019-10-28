@@ -14,7 +14,9 @@
         android:layout_height="wrap_content"
         android:text="Ticket Booking"
         android:textAlignment="center"
-        android:textSize="30sp" />
+        android:textAllCaps="true"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView8"
@@ -100,7 +102,7 @@
     <Button
         android:id="@+id/button4"
         android:layout_width="80dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginLeft="310dp"
         android:layout_marginTop="-100dp"
         android:onClick="onDelete"
@@ -109,7 +111,7 @@
     <Button
         android:id="@+id/button5"
         android:layout_width="80dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginLeft="310dp"
         android:layout_marginTop="30dp"
         android:onClick="onDelete"
@@ -136,24 +138,22 @@
         android:layout_width="97dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="-380dp"
-        android:text="TextView" />
+        android:layout_marginTop="-380dp" />
 
     <TextView
         android:id="@+id/timeTV"
         android:layout_width="80dp"
-        android:layout_height="30dp"
+        android:layout_height="20dp"
         android:layout_marginLeft="220dp"
-        android:layout_marginTop="-10dp"
-        android:text="TextView" />
+        android:layout_marginTop="-15dp" />
 
     <Button
         android:id="@+id/button6"
 
         android:layout_width="80dp"
-        android:layout_height="38dp"
+        android:layout_height="50dp"
         android:layout_marginLeft="310dp"
-        android:layout_marginTop="-20dp"
+        android:layout_marginTop="-35dp"
         android:onClick="onDelete"
         android:text="Delete"
 
@@ -165,8 +165,7 @@
         android:layout_width="80dp"
         android:layout_height="20dp"
         android:layout_marginLeft="120dp"
-        android:layout_marginTop="-45dp"
-        android:text="TextView" />
+        android:layout_marginTop="-40dp" />
 
     <Button
         android:id="@+id/backTicketBTN"
