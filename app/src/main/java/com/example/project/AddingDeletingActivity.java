@@ -64,6 +64,12 @@ public class AddingDeletingActivity extends AdminLoginActivity {
 
     }
 
+    public void onBackClick(View v)
+    {
+        Intent intent = new Intent(this, AdminLoginActivity.class);
+        startActivityForResult(intent, 1);
+
+    }
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if(resultCode ==NAME1) {
             String v = data.getStringExtra("NAME1");

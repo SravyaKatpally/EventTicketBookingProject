@@ -31,18 +31,52 @@ public class SignUpActivity extends AppCompatActivity {
         EditText psw = findViewById(R.id.passwordET);
         EditText cpsw = findViewById(R.id.cPassword);
         TextView tv18 = findViewById(R.id.textView18);
-
-        if (!name.getText().toString().isEmpty()) {
-            if (psw.getText().toString().equals("abc") && cpsw.getText().toString().equals("abc")) {
-                Toast.makeText(getApplicationContext(),
-                        "SignUp Successful", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(this, MainActivity.class);
-                startActivityForResult(intent, 1);
-            } else {
-
-                Toast.makeText(getApplicationContext(), "Enter Valid Credentials", Toast.LENGTH_SHORT).show();
+        if (!name.getText().toString().isEmpty() ||
+                !name.getText().toString().isEmpty() ||
+                !name.getText().toString().isEmpty() ||
+                !name.getText().toString().isEmpty() ||
+                !name.getText().toString().isEmpty() )
+        {
+            if((psw.getText().toString().length()==8) && (cpsw.getText().toString().length()==8))
+            {
+                if(psw.getText().toString().equalsIgnoreCase(cpsw.getText().toString()))
+                {
+                    if(mail.getText().toString().contains("@"))
+                    {
+                        if(num.getText().toString().length()==10)
+                        {
+                            Toast.makeText(getApplicationContext(),
+                                    "SignUp Successful", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(this, MainActivity.class);
+                            startActivityForResult(intent, 1);
+                        }
+                        else
+                        {
+                            Toast.makeText(getApplicationContext(),
+                                    "Enter 10 digits phone number", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                    else
+                    {
+                        Toast.makeText(getApplicationContext(),
+                                "Enter valid email id", Toast.LENGTH_SHORT).show();
+                    }
+                }
+                else
+                {
+                    Toast.makeText(getApplicationContext(),
+                            "Your password doesn't match", Toast.LENGTH_SHORT).show();
+                }
             }
-        } else {
+            else
+            {
+                Toast.makeText(getApplicationContext(),
+                        "Your password should be of 8 characters length", Toast.LENGTH_SHORT).show();
+            }
+
+        }
+        else
+        {
             Toast.makeText(getApplicationContext(),
                     "Enter all the Fields", Toast.LENGTH_SHORT).show();
         }
