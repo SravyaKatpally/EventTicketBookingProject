@@ -25,12 +25,19 @@ public class AddEventActivity extends AppCompatActivity {
 
     public void onClick(View view)
     {
-        TextView t1 = findViewById(R.id.textView17);
-        Button b1 = findViewById(R.id.confirmBTN) ;
-        if(view == b1)
+        //TextView t1 = findViewById(R.id.textView17);
+        //Button b1 = findViewById(R.id.confirmBTN) ;
+        //if(view == b1)
         {
-            t1.setText(" Confirmed ");
+          //  t1.setText(" Confirmed ");
         }
+    }
+
+
+    public void onReturnLogin(View view)
+    {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivityForResult(intent, 1);
     }
 
     public void addEventClick(View v)
