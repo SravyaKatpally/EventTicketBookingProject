@@ -21,7 +21,7 @@ import org.w3c.dom.Text;
 import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
 
-public class EventActivity extends AppCompatActivity {
+public class CricketEventActivity extends AppCompatActivity{
 
     private Integer a = 50;
     String h = "";
@@ -114,7 +114,7 @@ public class EventActivity extends AppCompatActivity {
 
         sharedEditor.putInt("data",a);
         sharedEditor.commit();
-        }
+    }
 
 
     public void onBack(View view) {
@@ -122,13 +122,5 @@ public class EventActivity extends AppCompatActivity {
         startActivityForResult(intent, 1);
     }
 
-    public void onActivityResult(int requestCode, int resultCode, Intent data)
-    {
-        if(resultCode == EVENTNAME)
-        {
-            String intentData = data.getStringExtra("EVENTNAME");
-            TextView tv = findViewById(R.id.displayTV);
-            tv.setText("lslhseilglfck "+intentData);
-        }
-    }
+
 }

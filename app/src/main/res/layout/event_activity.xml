@@ -27,8 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="200dp"
         android:layout_marginTop="-130dp"
-        android:ems="10"
-        android:text="50" />
+        android:ems="10" />
 
     <TextView
         android:id="@+id/bookedTV"
