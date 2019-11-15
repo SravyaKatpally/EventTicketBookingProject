@@ -16,15 +16,20 @@ public class EventListActivity extends EventActivity {
         setContentView(R.layout.activity_event_list);
     }
 
-    public void bookTicket(View v)
+    public void bookTicketFootball(View v)
     {
         Intent intent = new Intent(this, EventActivity.class);
         startActivityForResult(intent,1);
     }
-
     public void backButton(View v)
     {
         Intent intent = new Intent(this, MainActivity.class);
+        startActivityForResult(intent,1);
+    }
+
+    public void bookTicketCricket(View v)
+    {
+        Intent intent = new Intent(this, CricketEventActivity.class);
         startActivityForResult(intent,1);
     }
 }

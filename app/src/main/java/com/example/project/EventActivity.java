@@ -121,14 +121,4 @@ public class EventActivity extends AppCompatActivity {
         Intent intent = new Intent(this, EventListActivity.class);
         startActivityForResult(intent, 1);
     }
-
-    public void onActivityResult(int requestCode, int resultCode, Intent data)
-    {
-        if(resultCode == EVENTNAME)
-        {
-            String intentData = data.getStringExtra("EVENTNAME");
-            TextView tv = findViewById(R.id.displayTV);
-            tv.setText("lslhseilglfck "+intentData);
-        }
-    }
 }

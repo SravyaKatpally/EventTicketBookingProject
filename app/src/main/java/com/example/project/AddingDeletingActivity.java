@@ -45,21 +45,21 @@ public class AddingDeletingActivity extends AdminLoginActivity {
         Button b5 = findViewById(R.id.thirdBook);
         Button b6 = findViewById(R.id.thirdDelete);
 
-        if (b1 == view) {
+        if (b2 == view) {
             t1.setVisibility(view.INVISIBLE);
             t2.setVisibility(view.INVISIBLE);
             t3.setVisibility(view.INVISIBLE);
             b1.setVisibility(view.INVISIBLE);
             b2.setVisibility(view.INVISIBLE);
         }
-        if (b2 == view) {
+        if (b4 == view) {
             t20.setVisibility(view.INVISIBLE);
             t21.setVisibility(view.INVISIBLE);
             t22.setVisibility(view.INVISIBLE);
             b3.setVisibility(view.INVISIBLE);
             b4.setVisibility(view.INVISIBLE);
         }
-        if (b3 == view) {
+        if (b6 == view) {
             t30.setVisibility(view.INVISIBLE);
             t31.setVisibility(view.INVISIBLE);
             t32.setVisibility(view.INVISIBLE);

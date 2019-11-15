@@ -66,20 +66,10 @@ public class CricketEventActivity extends AppCompatActivity{
                     Integer c = Integer.parseInt(numOfTickets.getText().toString());
                     //Integer a =0;
                     a = oo - c;
-
-
                     SharedPreferences sharedData = getPreferences(Context.MODE_PRIVATE);
                     SharedPreferences.Editor editor = sharedData.edit();
-
                     editor.putInt("data", a);
                     editor.commit();
-
-
-                    //SharedPreferences sharedData = getPreferences(Context.MODE_PRIVATE);
-                    //a = sharedData.getInt("data", 0);
-
-
-                    //numTicket.setText(a.toString());
                 }
             }
             @Override
