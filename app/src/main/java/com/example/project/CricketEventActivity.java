@@ -84,9 +84,6 @@ public class CricketEventActivity extends AppCompatActivity{
         SharedPreferences sharedData = getPreferences(Context.MODE_PRIVATE);
         SharedPreferences.Editor sharedEditor = sharedData.edit();
         a = sharedData.getInt("data", 0);
-
-
-
         TextView numOfTickets = findViewById(R.id.bookedTV);
         if(Integer.parseInt(numOfTickets.getText().toString()) == 0)
         {
@@ -97,9 +94,6 @@ public class CricketEventActivity extends AppCompatActivity{
         {
             TextView ll = findViewById(R.id.numTicketsTV);
             ll.setText(a.toString());
-
-            //Intent intent = new Intent(this, ConfirmActivity.class);
-            //startActivityForResult(intent, 1);
         }
 
         sharedEditor.putInt("data",a);

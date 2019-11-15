@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/d1"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="70dp"
+        android:hint="No.of available tickets"
+        android:textColorHint="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="80dp"
+        android:text="Select Number of Tickets"
+        android:textColorHint="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/numTicketsTV"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="-130dp"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/bookedTV"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="170dp"
+        android:text="Displays num of tickets" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="-29dp"
+        android:hint="No.of tickets booked"
+        android:textColorHint="@color/colorPrimary" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="250dp"
+        android:onClick="onBack"
+        android:text="back page" />
+
+    <Button
+        android:id="@+id/confirmBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="-130dp"
+        android:onClick="onConfirm"
+        android:text="Confirm" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="190dp"
+        android:layout_marginTop="-340dp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_marginTop="-200dp"
+        android:text="Book number of tickets" />
+
+</LinearLayout>

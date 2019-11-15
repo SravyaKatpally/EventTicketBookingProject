@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Event Ticket Booking</string>
+
+    <string name="back4app_server_url">https://parseapi.back4app.com/</string>
+
+    <!-- Change the following strings as required -->
+    <string name="back4app_app_id">LPKcRbTp0VuAIivhT2AmGov37Q5heTFO7gqpqiyK</string>
+    <string name="back4app_client_key">GBcwTDAfm5x9Vzw8f5OV0iVbNVIMh9X341PwO8f3</string>
 </resources>

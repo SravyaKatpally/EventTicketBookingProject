@@ -75,6 +75,19 @@ public class AddingDeletingActivity extends AdminLoginActivity {
 
     }
 
+    public void onBookFootball(View v)
+    {
+        Intent intent = new Intent(this, AddEventActivity.class);
+        startActivityForResult(intent, 1);
+    }
+
+    public void onBookCricket(View v)
+    {
+        Intent intent = new Intent(this, AddEventActivity.class);
+        startActivityForResult(intent, 1);
+    }
+
+
     public void onBackClick(View v)
     {
         Intent intent = new Intent(this, AdminLoginActivity.class);
