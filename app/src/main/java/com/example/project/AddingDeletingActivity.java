@@ -3,16 +3,11 @@ package com.example.project;
 
 
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
-
-import java.util.ArrayList;
 
 public class AddingDeletingActivity extends AdminLoginActivity {
 
@@ -30,40 +25,46 @@ public class AddingDeletingActivity extends AdminLoginActivity {
 
     public void onDelete(View view) {
         // Information of first delete
-        TextView t1 = findViewById(R.id.textView15);
-        TextView t2 = findViewById(R.id.textView2);
-        TextView t3 = findViewById(R.id.textView);
-        TextView t4 = findViewById(R.id.textView5);
-        TextView nameTV = findViewById(R.id.nameTV);
-        TextView dateTV = findViewById(R.id.dateTV);
-        TextView timeET = findViewById(R.id.timeET);
+        TextView t1 = findViewById(R.id.e1);
+        TextView t2 = findViewById(R.id.d1);
+        TextView t3 = findViewById(R.id.text1);
+        Button b1 = findViewById(R.id.book1);
+        Button b2 = findViewById(R.id.fd2);
 
-        // Information of second delete
-        TextView t5 = findViewById(R.id.textView7);
-        TextView t6 = findViewById(R.id.textView21);
-        TextView t7 = findViewById(R.id.textView24);
 
-        Button b1 = findViewById(R.id.button4);
-        Button b2 = findViewById(R.id.button5);
-        Button b3 = findViewById(R.id.button6);
+        TextView t20 = findViewById(R.id.e2);
+        TextView t21 = findViewById(R.id.date2);
+        TextView t22 = findViewById(R.id.time2);
+        Button b3 = findViewById(R.id.book2);
+        Button b4 = findViewById(R.id.delete2);
+
+
+        TextView t30 = findViewById(R.id.thirdEvent);
+        TextView t31 = findViewById(R.id.thirdDate);
+        TextView t32 = findViewById(R.id.thirdTime);
+        Button b5 = findViewById(R.id.thirdBook);
+        Button b6 = findViewById(R.id.thirdDelete);
 
         if (b1 == view) {
+            t1.setVisibility(view.INVISIBLE);
             t2.setVisibility(view.INVISIBLE);
             t3.setVisibility(view.INVISIBLE);
-            t4.setVisibility(view.INVISIBLE);
             b1.setVisibility(view.INVISIBLE);
-        }
-        if (b2 == view) {
-            t5.setVisibility(view.INVISIBLE);
-            t6.setVisibility(view.INVISIBLE);
-            t7.setVisibility(view.INVISIBLE);
             b2.setVisibility(view.INVISIBLE);
         }
-        if (b3 == view) {
-            nameTV.setVisibility(view.INVISIBLE);
-            dateTV.setVisibility(view.INVISIBLE);
-            timeET.setVisibility(view.INVISIBLE);
+        if (b2 == view) {
+            t20.setVisibility(view.INVISIBLE);
+            t21.setVisibility(view.INVISIBLE);
+            t22.setVisibility(view.INVISIBLE);
             b3.setVisibility(view.INVISIBLE);
+            b4.setVisibility(view.INVISIBLE);
+        }
+        if (b3 == view) {
+            t30.setVisibility(view.INVISIBLE);
+            t31.setVisibility(view.INVISIBLE);
+            t32.setVisibility(view.INVISIBLE);
+            b5.setVisibility(view.INVISIBLE);
+            b6.setVisibility(view.INVISIBLE);
         }
     }
 
@@ -86,13 +87,13 @@ public class AddingDeletingActivity extends AdminLoginActivity {
             String[] a = v.split(" ");
 
 
-            TextView t = findViewById(R.id.nameTV);
+            TextView t = findViewById(R.id.thirdEvent);
             t.setText(a[0]);
 
-            TextView t1 = findViewById(R.id.dateTV);
+            TextView t1 = findViewById(R.id.thirdDate);
             t1.setText(a[1]);
 
-            TextView t2 = findViewById(R.id.timeTV);
+            TextView t2 = findViewById(R.id.thirdTime);
             t2.setText(a[2]);
         }
     }

@@ -8,7 +8,7 @@
     tools:context=".AddEventActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/e1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -23,7 +23,7 @@
         app:layout_constraintVertical_bias="0.237" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/d1"
         android:layout_width="104dp"
         android:layout_height="28dp"
         android:gravity="center"
@@ -113,7 +113,7 @@
         app:layout_constraintVertical_bias="0.677" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/t1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"

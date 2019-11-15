@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?attr/actionModeBackground"
-    android:orientation="vertical"
-    tools:context=".AddingDeletingActivity">
+    android:orientation="vertical">
+
 
     <TextView
         android:id="@+id/textView16"
@@ -16,163 +15,310 @@
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textSize="30sp"
-        android:textStyle="bold" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.004" />
+
 
     <TextView
         android:id="@+id/textView8"
-        android:layout_width="100dp"
+        android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="50dp"
-        android:text="Events" />
+        android:text="Events"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.134" />
+
 
     <TextView
         android:id="@+id/textView9"
-        android:layout_width="80dp"
+        android:layout_width="65dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="120dp"
-        android:layout_marginTop="-20dp"
-        android:text="Date" />
+        android:layout_marginLeft="130dp"
+        android:text="Date"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.134" />
 
     <TextView
         android:id="@+id/textView10"
-        android:layout_width="80dp"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="220dp"
-        android:layout_marginTop="-20dp"
-        android:text="Time" />
+        android:layout_marginLeft="210dp"
+        android:text="Time"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.083"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.134" />
+
 
     <TextView
         android:id="@+id/textView11"
         android:layout_width="80dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="320dp"
-        android:layout_marginTop="-20dp"
-        android:text="Booking" />
+        android:layout_marginLeft="280dp"
+        android:text="Booking"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.61"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.134" />
+
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/e1"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="50dp"
-        android:text="Football event" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="80dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="120dp"
-        android:layout_marginTop="-20dp"
-        android:text="10/31/19" />
+        android:text="Football event"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.193" />
 
 
     <TextView
-        android:id="@+id/textView5"
-        android:layout_width="80dp"
+        android:id="@+id/d1"
+        android:layout_width="65dp"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:text="10/31/19"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.187"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.193" />
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-100dp"
+        android:text="11 AM"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.614"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.193" />
+
+
+    <Button
+        android:id="@+id/fd2"
+        android:layout_width="60dp"
+        android:layout_height="35dp"
         android:layout_marginLeft="220dp"
-        android:layout_marginTop="-20dp"
-        android:text="11 AM" />
+        android:onClick="onDelete"
+        android:text="Delete"
+        android:textAlignment="center"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.723"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.239" />
+
+    <Button
+        android:id="@+id/book1"
+        android:layout_width="60dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="220dp"
+        android:onClick="onDelete"
+        android:text="Book"
+        android:textAlignment="center"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.715"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.196" />
+
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/thirdEvent"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="50dp"
-        android:text="Cricket event" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.45" />
 
     <TextView
-        android:id="@+id/textView21"
-        android:layout_width="80dp"
+        android:id="@+id/date2"
+        android:layout_width="65dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="120dp"
-        android:layout_marginTop="-15dp"
-        android:text="11/02/19" />
+        android:text="11/02/19"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.028"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.321" />
 
     <TextView
-        android:id="@+id/textView24"
-        android:layout_width="80dp"
+        android:id="@+id/time2"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="220dp"
-        android:layout_marginTop="-18dp"
-        android:text="12 AM" />
+        android:text="12 AM"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.321" />
+
 
     <Button
-        android:id="@+id/button4"
-        android:layout_width="80dp"
-        android:layout_height="50dp"
-        android:layout_marginLeft="310dp"
-        android:layout_marginTop="-100dp"
+        android:id="@+id/delete2"
+        android:layout_width="60dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="220dp"
         android:onClick="onDelete"
-        android:text="Delete" />
+        android:text="Delete"
+        android:textAlignment="center"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.726"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.353" />
 
     <Button
-        android:id="@+id/button5"
-        android:layout_width="80dp"
-        android:layout_height="50dp"
-        android:layout_marginLeft="310dp"
-        android:layout_marginTop="30dp"
+        android:id="@+id/book2"
+        android:layout_width="60dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="220dp"
         android:onClick="onDelete"
-        android:text="Delete" />
+        android:text="Book"
+        android:textAlignment="center"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.726"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.31" />
 
     <Button
-        android:id="@+id/button12"
+        android:id="@+id/addevent"
         android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="200dp"
         android:onClick="onaddEvent"
-        android:text="Add Event" />
-
-    <TextView
-        android:id="@+id/textView15"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="100dp" />
-
-    <TextView
-        android:id="@+id/nameTV"
-
-        android:layout_width="97dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="-380dp" />
-
-    <TextView
-        android:id="@+id/timeTV"
-        android:layout_width="80dp"
-        android:layout_height="20dp"
-        android:layout_marginLeft="220dp"
-        android:layout_marginTop="-15dp" />
-
-    <Button
-        android:id="@+id/button6"
-
-        android:layout_width="80dp"
-        android:layout_height="50dp"
-        android:layout_marginLeft="310dp"
-        android:layout_marginTop="-35dp"
-        android:onClick="onDelete"
-        android:text="Delete"
-
-        />
-
-    <TextView
-        android:id="@+id/dateTV"
-
-        android:layout_width="80dp"
-        android:layout_height="20dp"
-        android:layout_marginLeft="120dp"
-        android:layout_marginTop="-40dp" />
+        android:text="Add Event"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.844" />
 
     <Button
         android:id="@+id/backTicketBTN"
-        android:layout_width="100dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="200dp"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
         android:onClick="onBackClick"
-        android:text="Back Button" />
+        android:text="Back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.029"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/e2"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="Cricket event"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.321" />
+
+    <TextView
+        android:id="@+id/thirdDate"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="120dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.046"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.45" />
+
+    <TextView
+        android:id="@+id/thirdTime"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="220dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.45" />
+
+
+    <Button
+        android:id="@+id/thirdBook"
+        android:layout_width="60dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="220dp"
+        android:onClick="onDelete"
+        android:text="Book"
+        android:textAlignment="center"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.757"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.442" />
+
+    <Button
+        android:id="@+id/thirdDelete"
+        android:layout_width="60dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="220dp"
+        android:onClick="onDelete"
+        android:text="Delete"
+        android:textAlignment="center"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.774"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/thirdBook"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
