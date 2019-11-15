@@ -23,6 +23,8 @@
         <activity android:name=".CricketEventActivity" />
         <activity android:name=".ConfirmActivity" />
         <activity android:name=".AddingDeletingActivity" />
+        <activity android:name=".AdminCricketBookActivity" />
+        <activity android:name=".AdminFootBallBookActivity" />
         <activity android:name=".EventListActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

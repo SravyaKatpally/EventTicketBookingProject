@@ -75,11 +75,11 @@
         android:id="@+id/textView6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="-200dp"
+        android:text="FOOTBALL EVENT"
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textSize="30sp"
-        android:textStyle="bold"
-        android:layout_marginTop="-200dp"
-        android:text="Book number of tickets" />
+        android:textStyle="bold" />
 
 </LinearLayout>

@@ -21,22 +21,22 @@ import org.w3c.dom.Text;
 import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
 
-public class CricketEventActivity extends AppCompatActivity{
-
-    private Integer a = 50;
+public class CricketEventActivity extends AppCompatActivity
+{
+    private Integer cricketTickets = 50;
     String h = "";
-    public static int EVENTNAME = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.event_activity);
+        setContentView(R.layout.activity_cricket_event);
 
         SharedPreferences sharedData = getPreferences(Context.MODE_PRIVATE);
-        a = sharedData.getInt("data", 0);
+        cricketTickets= sharedData.getInt("data", 0);
+
         TextView vv = findViewById(R.id.numTicketsTV);
-        vv.setText(a.toString());
+        vv.setText(cricketTickets.toString());
         String[] arraySpinner = new String[]{
                 "0", "1", "2", "3", "4", "5"
         };
@@ -64,12 +64,13 @@ public class CricketEventActivity extends AppCompatActivity{
                     Integer oo = Integer.parseInt(numTicket.getText().toString());
                     TextView numOfTickets = findViewById(R.id.bookedTV);
                     Integer c = Integer.parseInt(numOfTickets.getText().toString());
-                    //Integer a =0;
-                    a = oo - c;
+                    cricketTickets= oo - c;
+
                     SharedPreferences sharedData = getPreferences(Context.MODE_PRIVATE);
                     SharedPreferences.Editor editor = sharedData.edit();
-                    editor.putInt("data", a);
+                    editor.putInt("data", cricketTickets);
                     editor.commit();
+
                 }
             }
             @Override
@@ -83,7 +84,9 @@ public class CricketEventActivity extends AppCompatActivity{
 
         SharedPreferences sharedData = getPreferences(Context.MODE_PRIVATE);
         SharedPreferences.Editor sharedEditor = sharedData.edit();
-        a = sharedData.getInt("data", 0);
+        cricketTickets = sharedData.getInt("data", 0);
+
+
         TextView numOfTickets = findViewById(R.id.bookedTV);
         if(Integer.parseInt(numOfTickets.getText().toString()) == 0)
         {
@@ -93,10 +96,13 @@ public class CricketEventActivity extends AppCompatActivity{
         else
         {
             TextView ll = findViewById(R.id.numTicketsTV);
-            ll.setText(a.toString());
+            ll.setText(cricketTickets.toString());
+
+            //Intent intent = new Intent(this, ConfirmActivity.class);
+            //startActivityForResult(intent, 1);
         }
 
-        sharedEditor.putInt("data",a);
+        sharedEditor.putInt("data",cricketTickets);
         sharedEditor.commit();
     }
 
