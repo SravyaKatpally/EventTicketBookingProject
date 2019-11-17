@@ -20,8 +20,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.004" />
-
+        app:layout_constraintVertical_bias="0.023" />
 
     <TextView
         android:id="@+id/textView8"
@@ -29,6 +28,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:text="Events"
+        android:textAlignment="center"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -43,6 +44,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="130dp"
         android:text="Date"
+        android:textAlignment="center"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -56,6 +59,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="210dp"
         android:text="Time"
+        android:textAlignment="center"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.083"
@@ -70,6 +75,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="280dp"
         android:text="Booking"
+        android:textAlignment="center"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.61"
@@ -83,47 +90,50 @@
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
         android:text="Football event"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.193" />
-
+        app:layout_constraintVertical_bias="0.199" />
 
     <TextView
         android:id="@+id/d1"
         android:layout_width="65dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="80dp"
+        android:layout_marginTop="10dp"
         android:text="10/31/19"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.187"
+        app:layout_constraintHorizontal_bias="0.176"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.193" />
+        app:layout_constraintVertical_bias="0.199" />
+
 
     <TextView
         android:id="@+id/text1"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="-100dp"
+        android:layout_marginTop="10dp"
         android:text="11 AM"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.614"
+        app:layout_constraintHorizontal_bias="0.609"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.193" />
-
+        app:layout_constraintVertical_bias="0.199" />
 
     <Button
         android:id="@+id/fd2"
         android:layout_width="60dp"
         android:layout_height="35dp"
         android:layout_marginLeft="220dp"
+        android:layout_marginTop="10dp"
         android:onClick="onDelete"
         android:text="Delete"
         android:textAlignment="center"
@@ -140,6 +150,7 @@
         android:layout_width="60dp"
         android:layout_height="35dp"
         android:layout_marginLeft="220dp"
+        android:layout_marginTop="10dp"
         android:onClick="onBookFootball"
         android:text="Book"
         android:textAlignment="center"
@@ -155,7 +166,7 @@
         android:id="@+id/thirdEvent"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -208,11 +219,11 @@
 
     <Button
         android:id="@+id/book2"
+        android:text="Book"
         android:layout_width="60dp"
         android:layout_height="35dp"
         android:layout_marginLeft="220dp"
         android:onClick="onBookCricket"
-        android:text="Book"
         android:textAlignment="center"
         android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
