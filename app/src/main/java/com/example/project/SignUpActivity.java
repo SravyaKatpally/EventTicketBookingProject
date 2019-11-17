@@ -24,7 +24,56 @@ public class SignUpActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
+        final Button sign_action_button = findViewById(R.id.sign_up_button);
+        sign_action_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                EditText name = findViewById(R.id.name);
+                final EditText mail = findViewById(R.id.mail);
+                EditText mobile = findViewById(R.id.numberEt);
+                EditText password = findViewById(R.id.passwordET);
+
+                final ParseUser sing_up_user = new ParseUser();
+                sing_up_user.setEmail(mail.getText().toString());
+                sing_up_user.setPassword(password.getText().toString());
+                sing_up_user.setUsername(name.getText().toString());
+                sing_up_user.put("Mobile",(mobile.getText().toString()));
+                sing_up_user.signUpInBackground(new SignUpCallback() {
+                    @Override
+                    public void done(ParseException e) {
+                        if (e == null) {
+                            //dlg.dismiss();
+                            alertDisplayer("Sucessful Signup","Successfully signed up " + mail.getText().toString() + "!");
+
+                        } 
+                    }
+                });
+
+            }
+        });
+
+
     }
+
+    private void alertDisplayer(String title,String message){
+        AlertDialog.Builder builder = new AlertDialog.Builder(SignUpActivity.this)
+                .setTitle(title)
+                .setMessage(message)
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+//                        Intent intent = new Intent(SignUpActivity.this, MainScreen.class);
+//                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+//                        startActivity(intent);
+                        Toast.makeText(SignUpActivity.this, "Succesfully created user account", Toast.LENGTH_SHORT).show();
+                    }
+                });
+        AlertDialog ok = builder.create();
+        ok.show();
+    }
+
     public void onBackClick(View view)
     {
         Intent intent = new Intent(this, MainActivity.class);
