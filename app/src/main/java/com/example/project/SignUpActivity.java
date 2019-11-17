@@ -46,7 +46,12 @@ public class SignUpActivity extends AppCompatActivity {
                             //dlg.dismiss();
                             alertDisplayer("Sucessful Signup","Successfully signed up " + mail.getText().toString() + "!");
 
-                        } 
+                        } else {
+                            //dlg.dismiss();
+                            ParseUser.logOut();
+                            Toast.makeText(SignUpActivity.this, "error message", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SignUpActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
+                        }
                     }
                 });
 
