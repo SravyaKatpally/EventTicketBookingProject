@@ -2,7 +2,9 @@ package com.example.project;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,25 +16,21 @@ import java.util.ArrayList;
 public class AddEventActivity extends AppCompatActivity {
     public static int NAME1 = 0;
 
+    private String name1 = "";
+    private String date1 = "";
+    private String time1 = "";
+
     ArrayList<String> list = new ArrayList<String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_event);
+
+
     }
+
     
-
-    public void onClick(View view)
-    {
-        //TextView t1 = findViewById(R.id.textView17);
-        //Button b1 = findViewById(R.id.confirmBTN) ;
-        //if(view == b1)
-        {
-          //  t1.setText(" Confirmed ");
-        }
-    }
-
 
     public void onReturnLogin(View view)
     {
@@ -52,12 +50,9 @@ public class AddEventActivity extends AppCompatActivity {
         String time1 = et2.getText().toString();
 
         String main = name1 +" "+date1 +" "+time1;
-
         Intent i = new Intent();
         i.putExtra("NAME1",main);
         setResult(AddingDeletingActivity.NAME1,i);
-
         finish();
     }
-
 }
