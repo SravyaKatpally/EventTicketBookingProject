@@ -88,10 +88,9 @@
         app:layout_constraintVertical_bias="0.578" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/sign_up_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="signup"
         android:text="SIGN UP"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

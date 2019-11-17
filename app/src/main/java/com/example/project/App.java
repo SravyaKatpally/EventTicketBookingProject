@@ -10,16 +10,16 @@ import com.parse.Parse;
 import com.parse.ParseInstallation;
 
 
-public class App extends Application {
+public class   App extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
 
         Parse.initialize(new Parse.Configuration.Builder(this)
-                .applicationId("LPKcRbTp0VuAIivhT2AmGov37Q5heTFO7gqpqiyK")
+                .applicationId(getString(R.string.back4app_app_id))
                 // if defined
-                .clientKey("GBcwTDAfm5x9Vzw8f5OV0iVbNVIMh9X341PwO8f3")
-                .server("https://parseapi.back4app.com/")
+                .clientKey(getString(R.string.back4app_client_key))
+                .server(getString(R.string.back4app_server_url))
                 .build()
         );
 
