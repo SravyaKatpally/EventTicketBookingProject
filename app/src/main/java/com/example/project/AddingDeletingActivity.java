@@ -1,8 +1,5 @@
 
 package com.example.project;
-
-
-
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -11,15 +8,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class AddingDeletingActivity extends AdminLoginActivity {
 
     public static int NAME1 =0;
-    public static int LOGIN =0;
-    public static int DATE1 =1;
-    public static int TIME1 =2;
-
-    private String name1 = "";
+    private String name1 = "abc";
     private String date1 = "";
     private String time1 = "";
 
@@ -27,6 +21,9 @@ public class AddingDeletingActivity extends AdminLoginActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adding_deleting_events);
+
+        SharedPreferences sharedData = getPreferences(Context.MODE_PRIVATE);
+        name1= sharedData.getString("data", "abc");
 
         Button b1 = findViewById(R.id.thirdBook);
         Button b2 = findViewById(R.id.thirdDelete);
@@ -41,7 +38,6 @@ public class AddingDeletingActivity extends AdminLoginActivity {
         bb1.setVisibility(View.INVISIBLE);
         bb2.setVisibility(View.INVISIBLE);
         bb3.setVisibility(View.INVISIBLE);
-
     }
 
     public void onDelete(View view)
@@ -52,7 +48,6 @@ public class AddingDeletingActivity extends AdminLoginActivity {
         TextView t3 = findViewById(R.id.text1);
         Button b1 = findViewById(R.id.book1);
         Button b2 = findViewById(R.id.fd2);
-
 
         TextView t20 = findViewById(R.id.e2);
         TextView t21 = findViewById(R.id.date2);
@@ -116,10 +111,10 @@ public class AddingDeletingActivity extends AdminLoginActivity {
         Intent intent = new Intent(this, AdminLoginActivity.class);
         startActivityForResult(intent, 1);
     }
-    public void onActivityResult(int requestCode, int resultCode, Intent data)
-    {
-        if(resultCode ==NAME1)
-        {
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (resultCode == NAME1) {
+            SharedPreferences sharedData = getPreferences(Context.MODE_PRIVATE);
+            name1 = sharedData.getString("name1", name1.toString());
 
             Button bb1 = findViewById(R.id.fd2);
             Button bb2 = findViewById(R.id.delete2);
@@ -128,15 +123,36 @@ public class AddingDeletingActivity extends AdminLoginActivity {
             String v = data.getStringExtra("NAME1");
             String[] a = v.split(" ");
             TextView t = findViewById(R.id.thirdEvent);
-            t.setText(a[0]);
-            TextView t1 = findViewById(R.id.thirdDate);
-            t1.setText(a[1]);
-            TextView t2 = findViewById(R.id.thirdTime);
-            t2.setText(a[2]);
+            name1 = a[0];
+            t.setText(name1.toString());
 
-            bb1.setVisibility(View.INVISIBLE);
-            bb2.setVisibility(View.INVISIBLE);
-            bb3.setVisibility(View.INVISIBLE);
+
+            TextView t1 = findViewById(R.id.thirdDate);
+            date1 = a[1];
+            t1.setText(date1);
+
+            TextView t2 = findViewById(R.id.thirdTime);
+            time1 = a[2];
+            t2.setText(time1);
+
+            bb1.setVisibility(View.VISIBLE);
+            bb2.setVisibility(View.VISIBLE);
+            bb3.setVisibility(View.VISIBLE);
+
+            SharedPreferences.Editor editor = sharedData.edit();
+            editor.putString("name1", name1.toString());
+            editor.commit();
         }
+    }
+
+    public void confirmEvent(View v)
+    {
+        SharedPreferences sharedData = getPreferences(Context.MODE_PRIVATE);
+        SharedPreferences.Editor sharedEditor = sharedData.edit();
+        name1 = sharedData.getString("name1", "abc");
+        sharedEditor.putString("name1",name1.toString());
+        sharedEditor.commit();
+
+        Toast.makeText(getApplicationContext(), "Confirmed", Toast.LENGTH_SHORT).show();
     }
 }
