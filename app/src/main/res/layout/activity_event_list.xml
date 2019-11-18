@@ -115,25 +115,17 @@
         android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="310dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="15dp"
         android:onClick="bookTicketCricket"
         android:text="Book" />
-
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="100dp"
-        android:text="Similarly,we can add other list of events"
-        android:textAlignment="center"
-        android:textSize="18sp" />
 
     <Button
         android:id="@+id/button11"
         android:layout_width="100dp"
         android:layout_height="70dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="90dp"
         android:onClick="backButton"
-        android:text="BACK BUTTON" />
+        android:text="BACK" />
 
 </LinearLayout>

@@ -66,10 +66,14 @@ public class CricketEventActivity extends AppCompatActivity
                     Integer c = Integer.parseInt(numOfTickets.getText().toString());
                     cricketTickets= oo - c;
 
+
+
                     SharedPreferences sharedData = getPreferences(Context.MODE_PRIVATE);
                     SharedPreferences.Editor editor = sharedData.edit();
                     editor.putInt("data", cricketTickets);
                     editor.commit();
+
+
 
                 }
             }
@@ -98,10 +102,10 @@ public class CricketEventActivity extends AppCompatActivity
             TextView ll = findViewById(R.id.numTicketsTV);
             ll.setText(cricketTickets.toString());
 
-            //Intent intent = new Intent(this, ConfirmActivity.class);
-            //startActivityForResult(intent, 1);
+            Toast.makeText(getApplicationContext(), "Your ticket confirmed", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, ConfirmActivity.class);
+            startActivityForResult(intent, 1);
         }
-
         sharedEditor.putInt("data",cricketTickets);
         sharedEditor.commit();
     }

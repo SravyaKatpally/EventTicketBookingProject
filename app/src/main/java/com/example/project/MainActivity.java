@@ -36,13 +36,6 @@ public class MainActivity extends AppCompatActivity {
         startActivityForResult(intent,1);
     }
 
-   // public void login(View view)
-    //{
-      //  Intent intent = new Intent(this, EventListActivity.class);
-        // startActivityForResult(intent,1);
-   // }
-
-
     public void onAdminLogin(View view)
     {
         Intent intent = new Intent(this, AdminLoginActivity.class);
@@ -62,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         {
             Toast.makeText(getApplicationContext(),
                     "Successfully logged in",Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(this,EventListActivity.class);
+            Intent intent = new Intent(this,AddingDeletingActivity.class);
             startActivityForResult(intent,login);
         }
         else {
