@@ -16,8 +16,8 @@ public class ConfirmActivity extends EventActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.confirm_event);
         TextView tv = findViewById(R.id.confirmNumTV);
-        Integer c = ThreadLocalRandom.current().nextInt(1000000,1000000000);
-        tv.setText("C" + c.toString());
+        Integer randomNum = ThreadLocalRandom.current().nextInt(1000000,1000000000);
+        tv.setText("C" + randomNum.toString());
     }
     public void onBack(View view)
     {

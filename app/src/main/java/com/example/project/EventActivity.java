@@ -23,7 +23,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class EventActivity extends AppCompatActivity {
 
-    private Integer cricketTickets = 50;
+    private Integer footballTickets = 50;
     String h = "";
 
     @Override
@@ -33,9 +33,9 @@ public class EventActivity extends AppCompatActivity {
         setContentView(R.layout.event_activity);
 
         SharedPreferences sharedData = getPreferences(Context.MODE_PRIVATE);
-        cricketTickets= sharedData.getInt("data", 0);
+        footballTickets= sharedData.getInt("data", 0);
         TextView vv = findViewById(R.id.numTicketsTV);
-        vv.setText(cricketTickets.toString());
+        vv.setText(footballTickets.toString());
         String[] arraySpinner = new String[]{
                 "0", "1", "2", "3", "4", "5"
         };
@@ -63,13 +63,10 @@ public class EventActivity extends AppCompatActivity {
                     Integer oo = Integer.parseInt(numTicket.getText().toString());
                     TextView numOfTickets = findViewById(R.id.bookedTV);
                     Integer c = Integer.parseInt(numOfTickets.getText().toString());
-                    //Integer a =0;
-                    cricketTickets= oo - c;
-
-
+                    footballTickets= oo - c;
                     SharedPreferences sharedData = getPreferences(Context.MODE_PRIVATE);
                     SharedPreferences.Editor editor = sharedData.edit();
-                    editor.putInt("data", cricketTickets);
+                    editor.putInt("data", footballTickets);
                     editor.commit();
                 }
             }
@@ -84,9 +81,7 @@ public class EventActivity extends AppCompatActivity {
 
         SharedPreferences sharedData = getPreferences(Context.MODE_PRIVATE);
         SharedPreferences.Editor sharedEditor = sharedData.edit();
-        cricketTickets = sharedData.getInt("data", 0);
-
-
+        footballTickets = sharedData.getInt("data", 0);
 
         TextView numOfTickets = findViewById(R.id.bookedTV);
         if(Integer.parseInt(numOfTickets.getText().toString()) == 0)
@@ -97,16 +92,15 @@ public class EventActivity extends AppCompatActivity {
         else
         {
             TextView ll = findViewById(R.id.numTicketsTV);
-            ll.setText(cricketTickets.toString());
-
-            //Intent intent = new Intent(this, ConfirmActivity.class);
-            //startActivityForResult(intent, 1);
+            ll.setText(footballTickets.toString());
+            Toast.makeText(getApplicationContext(), "Your ticket confirmed", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, ConfirmActivity.class);
+            startActivityForResult(intent, 1);
         }
 
-        sharedEditor.putInt("data",cricketTickets);
+        sharedEditor.putInt("data",footballTickets);
         sharedEditor.commit();
-        }
-
+    }
 
     public void onBack(View view) {
         Intent intent = new Intent(this, EventListActivity.class);

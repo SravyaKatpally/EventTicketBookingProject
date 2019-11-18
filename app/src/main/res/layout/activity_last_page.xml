@@ -7,18 +7,22 @@
 
     <TextView
         android:id="@+id/textView12"
-        android:layout_width="150dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="150dp"
+        android:layout_marginLeft="70dp"
         android:layout_marginTop="200dp"
         android:layout_marginBottom="-100dp"
-        android:text="Ticket confirmed"
-        android:textSize="24sp" />
+        android:text="Ticket Confirmed"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/button13"
-        android:layout_width="100dp"
+        android:layout_width="150dp"
         android:layout_height="70dp"
+        android:layout_marginLeft="140dp"
         android:layout_marginTop="200dp"
         android:onClick="returnLogin"
         android:text="Return to login" />
