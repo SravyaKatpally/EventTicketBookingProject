@@ -65,16 +65,10 @@ public class CricketEventActivity extends AppCompatActivity
                     TextView numOfTickets = findViewById(R.id.bookedTV);
                     Integer c = Integer.parseInt(numOfTickets.getText().toString());
                     cricketTickets= oo - c;
-
-
-
                     SharedPreferences sharedData = getPreferences(Context.MODE_PRIVATE);
                     SharedPreferences.Editor editor = sharedData.edit();
                     editor.putInt("data", cricketTickets);
                     editor.commit();
-
-
-
                 }
             }
             @Override

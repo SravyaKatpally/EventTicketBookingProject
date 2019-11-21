@@ -38,6 +38,8 @@ public class AdminLoginActivity extends AppCompatActivity {
         {
             Toast.makeText(getApplicationContext(),
                     "Successfully logged in",Toast.LENGTH_SHORT).show();
+
+
             Intent intent = new Intent(this,AddingDeletingActivity.class);
             startActivityForResult(intent,login);
         }
