@@ -78,7 +78,7 @@
         android:text="11 AM" />
 
     <TextView
-        android:id="@+id/thirdEvent"
+        android:id="@+id/e3"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"

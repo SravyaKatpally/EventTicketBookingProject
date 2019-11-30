@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -57,9 +56,9 @@ public class AddingDeletingActivity extends AdminLoginActivity {
         Button b3 = findViewById(R.id.book2);
         Button b4 = findViewById(R.id.delete2);
 
-        TextView t30 = findViewById(R.id.thirdEvent);
-        TextView t31 = findViewById(R.id.thirdDate);
-        TextView t32 = findViewById(R.id.thirdTime);
+        TextView t30 = findViewById(R.id.e3);
+        TextView t31 = findViewById(R.id.Date3);
+        TextView t32 = findViewById(R.id.Time3);
         Button b5 = findViewById(R.id.thirdBook);
         Button b6 = findViewById(R.id.thirdDelete);
 
@@ -137,14 +136,14 @@ public class AddingDeletingActivity extends AdminLoginActivity {
             Log.d("added", "sharedPREFERENCE");
             editor.commit();
 
-            TextView nameText = findViewById(R.id.thirdEvent);
+            TextView nameText = findViewById(R.id.e3);
             nameText.setText(name);
 
-            TextView t1 = findViewById(R.id.thirdDate);
+            TextView t1 = findViewById(R.id.Date3);
             date1 = a[1];
             t1.setText(date1);
 
-            TextView t2 = findViewById(R.id.thirdTime);
+            TextView t2 = findViewById(R.id.Time3);
             time1 = a[2];
             t2.setText(time1);
 
