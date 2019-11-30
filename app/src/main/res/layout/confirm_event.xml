@@ -39,7 +39,6 @@
         android:id="@+id/confirmNumTV"
         android:layout_width="100dp"
         android:layout_height="30dp"
-        android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.701"
