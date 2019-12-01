@@ -124,7 +124,8 @@
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="50dp" />
+        android:layout_marginTop="50dp"
+        android:text="Volleyball" />
 
     <TextView
         android:id="@+id/d2"
@@ -132,7 +133,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="120dp"
         android:layout_marginTop="-15dp"
-        android:text="11/02/19" />
+        android:text="12/02/19" />
 
     <TextView
         android:id="@+id/t2"
@@ -140,7 +141,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="220dp"
         android:layout_marginTop="-18dp"
-        android:text="12 AM" />
+        android:text="1 PM" />
 
     <Button
         android:id="@+id/button11"
