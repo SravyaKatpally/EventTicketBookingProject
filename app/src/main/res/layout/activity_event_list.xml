@@ -101,6 +101,30 @@
         android:layout_marginTop="-18dp"
         android:text="12 AM" />
 
+    <TextView
+        android:id="@+id/e5"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="50dp"
+        android:text="Volleyball" />
+
+    <TextView
+        android:id="@+id/d4"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="-15dp"
+        android:text="12/02/19" />
+
+    <TextView
+        android:id="@+id/t4"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="-18dp"
+        android:text="1 PM" />
+
     <Button
         android:id="@+id/firstBTN"
         android:layout_width="80dp"
@@ -119,30 +143,6 @@
         android:onClick="bookTicketCricket"
         android:text="Book" />
 
-    <TextView
-        android:id="@+id/e3"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="50dp"
-        android:text="Volleyball" />
-
-    <TextView
-        android:id="@+id/d2"
-        android:layout_width="80dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="120dp"
-        android:layout_marginTop="-15dp"
-        android:text="12/02/19" />
-
-    <TextView
-        android:id="@+id/t2"
-        android:layout_width="80dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="220dp"
-        android:layout_marginTop="-18dp"
-        android:text="1 PM" />
-
     <Button
         android:id="@+id/button11"
         android:layout_width="100dp"
@@ -151,5 +151,6 @@
         android:layout_marginTop="90dp"
         android:onClick="backButton"
         android:text="BACK" />
+
 
 </LinearLayout>
