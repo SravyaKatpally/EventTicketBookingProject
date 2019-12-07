@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/main4"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -15,8 +16,9 @@
         android:gravity="center"
         android:hint="Enter Username"
         android:inputType="textPersonName"
-        android:textColor="#1B1B1A"
-        android:textColorHint="#1B1B1A"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textColorLink="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.545"
@@ -33,7 +35,9 @@
         android:gravity="center"
         android:hint="Enter Password"
         android:inputType="textPassword"
-        android:textColorHint="#252524"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textColorLink="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.545"
@@ -44,7 +48,9 @@
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
+        android:background="?attr/actionModeBackground"
+        android:backgroundTintMode="screen"
         android:gravity="center"
         android:onClick="onLogin"
         android:text="LOGIN"
@@ -59,25 +65,26 @@
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
+        android:background="?attr/actionModeBackground"
         android:onClick="onSignUp"
         android:text="SIGN UP"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.829"
+        app:layout_constraintHorizontal_bias="0.767"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.73" />
+        app:layout_constraintVertical_bias="0.733" />
 
     <TextView
         android:id="@+id/e1"
-        android:layout_width="226dp"
+        android:layout_width="150dp"
         android:layout_height="48dp"
         android:gravity="center|center_horizontal"
         android:text="IF NEW USER, SIGN UP HERE "
-        android:textColor="#181716"
-        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -89,7 +96,8 @@
     <Button
         android:id="@+id/button3"
         android:layout_width="142dp"
-        android:layout_height="44dp"
+        android:layout_height="40dp"
+        android:background="?attr/actionModeBackground"
         android:onClick="onAdminLogin"
         android:text="ADMIN LOGIN"
         android:textSize="18sp"
@@ -103,18 +111,19 @@
     <TextView
         android:id="@+id/textView3"
         android:layout_width="400dp"
-        android:layout_height="33dp"
+        android:layout_height="60dp"
         android:gravity="center"
         android:text="welcome to event ticket booking"
         android:textAlignment="center"
         android:textAllCaps="true"
-        android:textColor="#1D1C1A"
-        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
 
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.094" />
+        app:layout_constraintVertical_bias="0.089" />
 </androidx.constraintlayout.widget.ConstraintLayout>

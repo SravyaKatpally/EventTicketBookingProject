@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/main4"
     android:orientation="vertical"
     tools:context=".EventListActivity">
 
@@ -15,10 +16,10 @@
         android:textAlignment="center"
 
         android:textAllCaps="true"
+        android:textColor="#FFFFFF"
         android:textSize="30sp"
-        android:textStyle="bold"
 
-        />
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView8"
@@ -26,7 +27,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="50dp"
-        android:text="Events" />
+        android:text="Events"
+        android:textColor="#FFFFFF" />
 
     <TextView
         android:id="@+id/textView9"
@@ -34,7 +36,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="120dp"
         android:layout_marginTop="-20dp"
-        android:text="Date" />
+        android:text="Date"
+        android:textColor="#FFFFFF" />
 
     <TextView
         android:id="@+id/textView10"
@@ -42,7 +45,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="220dp"
         android:layout_marginTop="-20dp"
-        android:text="Time" />
+        android:text="Time"
+        android:textColor="#FFFFFF" />
 
     <TextView
         android:id="@+id/textView11"
@@ -50,7 +54,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="320dp"
         android:layout_marginTop="-20dp"
-        android:text="Booking" />
+        android:text="Booking"
+        android:textColor="#FFFFFF" />
 
     <TextView
         android:id="@+id/e1"
@@ -58,7 +63,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="50dp"
-        android:text="Football event" />
+        android:text="Football event"
+        android:textColor="#FFFFFF" />
 
     <TextView
         android:id="@+id/d1"
@@ -66,7 +72,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="120dp"
         android:layout_marginTop="-20dp"
-        android:text="10/31/19" />
+        android:text="10/31/19"
+        android:textColor="#FFFFFF" />
 
 
     <TextView
@@ -75,7 +82,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="220dp"
         android:layout_marginTop="-20dp"
-        android:text="11 AM" />
+        android:text="11 AM"
+        android:textColor="#FFFFFF" />
 
     <TextView
         android:id="@+id/e4"
@@ -83,7 +91,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="50dp"
-        android:text="Cricket event" />
+        android:text="Cricket event"
+        android:textColor="#FFFFFF" />
 
     <TextView
         android:id="@+id/d3"
@@ -91,7 +100,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="120dp"
         android:layout_marginTop="-15dp"
-        android:text="11/02/19" />
+        android:text="11/02/19"
+        android:textColor="#FFFFFF" />
 
     <TextView
         android:id="@+id/t3"
@@ -99,7 +109,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="220dp"
         android:layout_marginTop="-18dp"
-        android:text="12 AM" />
+        android:text="12 AM"
+        android:textColor="#FFFFFF" />
 
     <TextView
         android:id="@+id/e5"
@@ -107,7 +118,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="50dp"
-        android:text="Volleyball" />
+        android:text="Volleyball"
+        android:textColor="#FFFFFF" />
 
     <TextView
         android:id="@+id/d4"
@@ -115,7 +127,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="120dp"
         android:layout_marginTop="-15dp"
-        android:text="12/02/19" />
+        android:text="12/02/19"
+        android:textColor="#FFFFFF" />
 
     <TextView
         android:id="@+id/t4"
@@ -123,7 +136,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="220dp"
         android:layout_marginTop="-18dp"
-        android:text="1 PM" />
+        android:text="1 PM"
+        android:textColor="#FFFFFF" />
 
     <Button
         android:id="@+id/firstBTN"
