@@ -24,13 +24,15 @@
 - Adding events
 - Deleting events
 
+## FLOW CHART
+![flowchart](flowchart.jpeg)
 
 ## ACCESSING CREDENTIALS
 ### USER LOGIN
-- Username - user1 , Password - 1111
+- Username - EventUser , Password - eventuser
 
 ### ADMIN LOGIN
-- Username - abc , Password - 123
+- Username - Admin , Password - admin
  
  ## DataBase
  In this project, we are using Back4App Database
