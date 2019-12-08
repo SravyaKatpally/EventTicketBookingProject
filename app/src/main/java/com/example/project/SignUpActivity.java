@@ -163,6 +163,13 @@ public class SignUpActivity extends AppCompatActivity {
         AlertDialog ok = builder.create();
         ok.show();
     }
+
+    public void onBackClick(View v)
+    {
+        Intent intent = new Intent(this,MainActivity.class);
+
+        startActivity(intent);
+    }
 }
 
 

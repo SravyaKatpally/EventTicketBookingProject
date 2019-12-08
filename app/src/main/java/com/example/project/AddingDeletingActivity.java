@@ -30,15 +30,13 @@ public class AddingDeletingActivity extends AdminLoginActivity {
         Button b2 = findViewById(R.id.thirdDelete);
 
        // b1.setVisibility(View.INVISIBLE);
-        b2.setVisibility(View.INVISIBLE);
+       // b2.setVisibility(View.INVISIBLE);
 
         Button bb1 = findViewById(R.id.fd2);
         Button bb2 = findViewById(R.id.delete2);
         Button bb3 = findViewById(R.id.thirdDelete);
 
-        bb1.setVisibility(View.INVISIBLE);
-        bb2.setVisibility(View.INVISIBLE);
-        bb3.setVisibility(View.INVISIBLE);
+
     }
 
     public void onDelete(View view)
