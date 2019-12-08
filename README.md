@@ -25,7 +25,7 @@
 - Deleting events
 
 ## FLOW CHART
-![flowchart](flowchart.jpeg)
+![flowchart](flowchart1.jpeg)
 
 ## ACCESSING CREDENTIALS
 ### USER LOGIN
