@@ -68,21 +68,21 @@ public class SignUpActivity extends AppCompatActivity {
                 }
                 if (isEmpty(numberET)) {
                     if (validationError) {
-                        validationErrorMessage.append("department name");
+                        validationErrorMessage.append("Phone number");
                     }
                     validationError = true;
                     validationErrorMessage.append(" ");
                 }
                 if (isEmpty(mailET)) {
                     if (validationError) {
-                        validationErrorMessage.append("doctor mailid");
+                        validationErrorMessage.append("Emailid");
                     }
                     validationError = true;
                     validationErrorMessage.append(" ");
                 }
                 if (isEmpty(passwd)) {
                     if (validationError) {
-                        validationErrorMessage.append("doctor phonenumber");
+                        validationErrorMessage.append("Password");
                     }
                     validationError = true;
                     validationErrorMessage.append(" ");
@@ -92,7 +92,7 @@ public class SignUpActivity extends AppCompatActivity {
                         validationErrorMessage.append("  ");
                     }
                     validationError = true;
-                    validationErrorMessage.append("password");
+                    validationErrorMessage.append("Confirm Password");
                 }
 
                 validationErrorMessage.append(".");
