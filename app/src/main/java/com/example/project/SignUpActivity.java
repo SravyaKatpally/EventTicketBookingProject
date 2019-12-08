@@ -3,6 +3,7 @@ package com.example.project;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -24,41 +25,126 @@ public class SignUpActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
-        final Button sign_action_button = findViewById(R.id.sign_up_button);
-        sign_action_button.setOnClickListener(new View.OnClickListener() {
+        final EditText nameET = (EditText) findViewById(R.id.name);
+        final EditText numberET = (EditText) findViewById(R.id.numberEt);
+        final EditText mailET = (EditText) findViewById(R.id.mail);
+        final EditText passwd = (EditText) findViewById(R.id.passwordET);
+        final EditText cPasswd = (EditText) findViewById(R.id.cPassword);
+
+
+        Button signBTN = findViewById(R.id.sign_up_button);
+
+
+        //Button backButton2 = findViewById(R.id.back2BTN);
+
+
+        signBTN.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-
-                EditText name = findViewById(R.id.name);
-                final EditText mail = findViewById(R.id.mail);
-                EditText mobile = findViewById(R.id.numberEt);
-                EditText password = findViewById(R.id.passwordET);
-
-                final ParseUser sing_up_user = new ParseUser();
-                sing_up_user.setEmail(mail.getText().toString());
-                sing_up_user.setPassword(password.getText().toString());
-                sing_up_user.setUsername(name.getText().toString());
-                sing_up_user.put("Mobile",(mobile.getText().toString()));
-                sing_up_user.signUpInBackground(new SignUpCallback() {
-                    @Override
-                    public void done(ParseException e) {
-                        if (e == null) {
-                            //dlg.dismiss();
-                            alertDisplayer("Sucessful Signup","Successfully signed up " + mail.getText().toString() + "!");
-
-                        } else {
-                            //dlg.dismiss();
-                            ParseUser.logOut();
-                            Toast.makeText(SignUpActivity.this, "error message", Toast.LENGTH_LONG).show();
-                            Toast.makeText(SignUpActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
-                        }
-                    }
-                });
-
+            public void onClick(View v) {
+                final ProgressDialog dlg = new ProgressDialog(SignUpActivity.this);
+                dlg.setTitle("Please, wait a moment.");
+                dlg.setMessage("Returning to the login section...");
+                dlg.show();
+                Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
+                dlg.dismiss();
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
             }
         });
 
 
+
+        signBTN.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick (View v){
+                //Validating the log in data
+                boolean validationError = false;
+
+                StringBuilder validationErrorMessage = new StringBuilder("Please, insert ");
+                if (isEmpty(nameET)) {
+                    validationError = true;
+                    validationErrorMessage.append("username");
+                }
+                if (isEmpty(numberET)) {
+                    if (validationError) {
+                        validationErrorMessage.append("department name");
+                    }
+                    validationError = true;
+                    validationErrorMessage.append(" ");
+                }
+                if (isEmpty(mailET)) {
+                    if (validationError) {
+                        validationErrorMessage.append("doctor mailid");
+                    }
+                    validationError = true;
+                    validationErrorMessage.append(" ");
+                }
+                if (isEmpty(passwd)) {
+                    if (validationError) {
+                        validationErrorMessage.append("doctor phonenumber");
+                    }
+                    validationError = true;
+                    validationErrorMessage.append(" ");
+                }
+                if (isEmpty(cPasswd)) {
+                    if (validationError) {
+                        validationErrorMessage.append("  ");
+                    }
+                    validationError = true;
+                    validationErrorMessage.append("password");
+                }
+
+                validationErrorMessage.append(".");
+
+                if (validationError) {
+                    Toast.makeText(SignUpActivity.this, validationErrorMessage.toString(), Toast.LENGTH_LONG).show();
+                    return;
+                }
+
+                //Setting up a progress dialog
+                final ProgressDialog dlg = new ProgressDialog(SignUpActivity.this);
+                dlg.setTitle("Please, wait a moment.");
+                dlg.setMessage("Signing up...");
+                dlg.show();
+
+                ParseUser user = new ParseUser();
+                user.setUsername(nameET.getText().toString());
+                user.setPassword(passwd.getText().toString());
+                user.signUpInBackground(new SignUpCallback() {
+                    @Override
+                    public void done(ParseException e) {
+                        if (e == null) {
+                            dlg.dismiss();
+                            alertDisplayer("Sucessful Signup!", "Please Login " + nameET.getText().toString() + "!");
+
+                        } else {
+                            dlg.dismiss();
+                            ParseUser.logOut();
+                            Toast.makeText(SignUpActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
+                        }
+                    }
+                });
+            }
+
+        });
+    }
+
+    private boolean isEmpty(EditText text) {
+        if (text.getText().toString().trim().length() > 0) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    private boolean isMatching(EditText text1, EditText text2){
+        if(text1.getText().toString().equals(text2.getText().toString())){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 
     private void alertDisplayer(String title,String message){
@@ -69,77 +155,14 @@ public class SignUpActivity extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.cancel();
-//                        Intent intent = new Intent(SignUpActivity.this, MainScreen.class);
-//                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-//                        startActivity(intent);
-                        Toast.makeText(SignUpActivity.this, "Succesfully created user account", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                        startActivity(intent);
                     }
                 });
         AlertDialog ok = builder.create();
         ok.show();
     }
-
-    public void onBackClick(View view)
-    {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivityForResult(intent,1);
-    }
-
-    public void signup(View v) {
-        EditText num = findViewById(R.id.numberEt);
-        EditText name = findViewById(R.id.name);
-        EditText mail = findViewById(R.id.mail);
-        EditText psw = findViewById(R.id.passwordET);
-        EditText cpsw = findViewById(R.id.cPassword);
-        TextView tv18 = findViewById(R.id.textView18);
-        if (!name.getText().toString().isEmpty() ||
-                !name.getText().toString().isEmpty() ||
-                !name.getText().toString().isEmpty() ||
-                !name.getText().toString().isEmpty() ||
-                !name.getText().toString().isEmpty() )
-        {
-            if((psw.getText().toString().length()==8) && (cpsw.getText().toString().length()==8))
-            {
-                if(psw.getText().toString().equalsIgnoreCase(cpsw.getText().toString()))
-                {
-                    if(mail.getText().toString().contains("@"))
-                    {
-                        if(num.getText().toString().length()==10)
-                        {
-                            Toast.makeText(getApplicationContext(),
-                                    "SignUp Successful", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(this, MainActivity.class);
-                            startActivityForResult(intent, 1);
-                        }
-                        else
-                        {
-                            Toast.makeText(getApplicationContext(),
-                                    "Enter 10 digits phone number", Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                    else
-                    {
-                        Toast.makeText(getApplicationContext(),
-                                "Enter valid email id", Toast.LENGTH_SHORT).show();
-                    }
-                }
-                else
-                {
-                    Toast.makeText(getApplicationContext(),
-                            "Your password doesn't match", Toast.LENGTH_SHORT).show();
-                }
-            }
-            else
-            {
-                Toast.makeText(getApplicationContext(),
-                        "Your password should be of 8 characters length", Toast.LENGTH_SHORT).show();
-            }
-
-        }
-        else
-        {
-            Toast.makeText(getApplicationContext(),
-                    "Enter all the Fields", Toast.LENGTH_SHORT).show();
-        }
-    }
 }
+
+
