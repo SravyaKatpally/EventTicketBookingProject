@@ -26,10 +26,10 @@ public class AddingDeletingActivity extends AdminLoginActivity {
         SharedPreferences sharedData = getPreferences(Context.MODE_PRIVATE);
         name= sharedData.getString("nameText", "abc");
 
-        Button b1 = findViewById(R.id.thirdBook);
+       // Button b1 = findViewById(R.id.thirdBook);
         Button b2 = findViewById(R.id.thirdDelete);
 
-        b1.setVisibility(View.INVISIBLE);
+       // b1.setVisibility(View.INVISIBLE);
         b2.setVisibility(View.INVISIBLE);
 
         Button bb1 = findViewById(R.id.fd2);
@@ -59,7 +59,7 @@ public class AddingDeletingActivity extends AdminLoginActivity {
         TextView t30 = findViewById(R.id.e3);
         TextView t31 = findViewById(R.id.Date3);
         TextView t32 = findViewById(R.id.Time3);
-        Button b5 = findViewById(R.id.thirdBook);
+        //Button b5 = findViewById(R.id.thirdBook);
         Button b6 = findViewById(R.id.thirdDelete);
 
         if (b2 == view) {
@@ -80,7 +80,7 @@ public class AddingDeletingActivity extends AdminLoginActivity {
             t30.setVisibility(view.INVISIBLE);
             t31.setVisibility(view.INVISIBLE);
             t32.setVisibility(view.INVISIBLE);
-            b5.setVisibility(view.INVISIBLE);
+            //b5.setVisibility(view.INVISIBLE);
             b6.setVisibility(view.INVISIBLE);
         }
     }
@@ -89,10 +89,10 @@ public class AddingDeletingActivity extends AdminLoginActivity {
     {
         Intent intent = new Intent(this, AddEventActivity.class);
         startActivityForResult(intent, 1);
-        Button b1 = findViewById(R.id.thirdBook);
-        Button b2 = findViewById(R.id.thirdDelete);
-        b1.setVisibility(View.VISIBLE);
-        b2.setVisibility(View.VISIBLE);
+        //Button b1 = findViewById(R.id.thirdBook);
+        //Button b2 = findViewById(R.id.thirdDelete);
+        //b1.setVisibility(View.VISIBLE);
+        //b2.setVisibility(View.VISIBLE);
     }
 
     public void onBookFootball(View v)
@@ -118,7 +118,7 @@ public class AddingDeletingActivity extends AdminLoginActivity {
         if(requestCode == login)
         {
             Button b = findViewById(R.id.addevent);
-            b.setVisibility(View.INVISIBLE);
+           // b.setVisibility(View.INVISIBLE);
         }
         if (resultCode == NAME1) {
             SharedPreferences sharedData = getPreferences(Context.MODE_PRIVATE);
@@ -147,10 +147,23 @@ public class AddingDeletingActivity extends AdminLoginActivity {
             time1 = a[2];
             t2.setText(time1);
 
-            bb1.setVisibility(View.VISIBLE);
-            bb2.setVisibility(View.VISIBLE);
-            bb3.setVisibility(View.VISIBLE);
+            //bb1.setVisibility(View.VISIBLE);
+            //bb2.setVisibility(View.VISIBLE);
+            //bb3.setVisibility(View.VISIBLE);
         }
+    }
+
+    public void bookTicketFootball(View v)
+    {
+        Intent intent = new Intent(this, EventActivity.class);
+        startActivityForResult(intent,1);
+    }
+
+
+    public void bookTicketCricket(View v)
+    {
+        Intent intent = new Intent(this, CricketEventActivity.class);
+        startActivityForResult(intent,1);
     }
 
     public void confirmEvent(View v)
