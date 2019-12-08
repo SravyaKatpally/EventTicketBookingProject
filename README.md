@@ -16,7 +16,7 @@
 - Login and signup page
 - Display all the events(Time and Date)
 - Displaying the number of tickets which user can book
-- Tickets Confirmation
+- Ticket Confirmation
 
 ## Admin
 - Login page
@@ -25,4 +25,4 @@
 
  
  ## DataBase
- In this project, we are using Fire Base where ER diagram is not needed
+ In this project, we are using Back4App Database
