@@ -1,5 +1,6 @@
 # EventTicketBookingProject
 
+## MOBILE COMPUTING - NOON CLASS - TEAM 02
 ## Team members
 - Sravya Katpally
 - Vinusha Sandadi
@@ -16,13 +17,24 @@
 - Login and signup page
 - Display all the events(Time and Date)
 - Displaying the number of tickets which user can book
-- Tickets Confirmation
+- Ticket Confirmation
 
 ## Admin
 - Login page
 - Adding events
 - Deleting events
 
+
+## ACCESSING CREDENTIALS
+### USER LOGIN
+- Username - user1 , Password - 1111
+
+### ADMIN LOGIN
+- Username - abc , Password - 123
  
  ## DataBase
- In this project, we are using Fire Base where ER diagram is not needed
+ In this project, we are using Back4App Database
+ 
+ ## Conclusion
+Even though this application would not replace the traditional methods completely, this project would eliminate most of the tedious tasks and is highly reliable, not only customers but also the organizations using this. With that being said, moving into the present online era people prefer booking tickets at their ease rather than physically going to a location for making their purchase.
+
