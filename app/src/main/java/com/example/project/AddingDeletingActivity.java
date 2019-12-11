@@ -35,6 +35,7 @@ public class AddingDeletingActivity extends AdminLoginActivity {
         Button bb1 = findViewById(R.id.fd2);
         Button bb2 = findViewById(R.id.delete2);
         Button bb3 = findViewById(R.id.thirdDelete);
+        bb3.setVisibility(View.INVISIBLE);
 
 
     }
@@ -45,13 +46,13 @@ public class AddingDeletingActivity extends AdminLoginActivity {
         TextView t1 = findViewById(R.id.e1);
         TextView t2 = findViewById(R.id.d1);
         TextView t3 = findViewById(R.id.text1);
-        Button b1 = findViewById(R.id.book1);
+
         Button b2 = findViewById(R.id.fd2);
 
         TextView t20 = findViewById(R.id.e2);
         TextView t21 = findViewById(R.id.date2);
         TextView t22 = findViewById(R.id.time2);
-        Button b3 = findViewById(R.id.book2);
+
         Button b4 = findViewById(R.id.delete2);
 
         TextView t30 = findViewById(R.id.e3);
@@ -64,14 +65,14 @@ public class AddingDeletingActivity extends AdminLoginActivity {
             t1.setVisibility(view.INVISIBLE);
             t2.setVisibility(view.INVISIBLE);
             t3.setVisibility(view.INVISIBLE);
-            b1.setVisibility(view.INVISIBLE);
+
             b2.setVisibility(view.INVISIBLE);
         }
         if (b4 == view) {
             t20.setVisibility(view.INVISIBLE);
             t21.setVisibility(view.INVISIBLE);
             t22.setVisibility(view.INVISIBLE);
-            b3.setVisibility(view.INVISIBLE);
+
             b4.setVisibility(view.INVISIBLE);
         }
         if (b6 == view) {
@@ -144,6 +145,8 @@ public class AddingDeletingActivity extends AdminLoginActivity {
             TextView t2 = findViewById(R.id.Time3);
             time1 = a[2];
             t2.setText(time1);
+
+            bb3.setVisibility(View.VISIBLE);
 
             //bb1.setVisibility(View.VISIBLE);
             //bb2.setVisibility(View.VISIBLE);
