@@ -62,7 +62,7 @@ public class AddingDeletingActivity extends AdminLoginActivity {
         TextView t32 = findViewById(R.id.Time3);
         //Button b5 = findViewById(R.id.thirdBook);
         Button b6 = findViewById(R.id.thirdDelete);
-        Button bb3 = findViewById(R.id.thirdDelete);
+
         Button  b41 = findViewById(R.id.fourthDelete);
 
         TextView tt = findViewById(R.id.event1TV);
@@ -90,20 +90,16 @@ public class AddingDeletingActivity extends AdminLoginActivity {
             //b5.setVisibility(view.INVISIBLE);
             b6.setVisibility(view.INVISIBLE);
         }
-        if (bb3 == view) {
-            t20.setVisibility(view.INVISIBLE);
-            t21.setVisibility(view.INVISIBLE);
-            t22.setVisibility(view.INVISIBLE);
 
-            b4.setVisibility(view.INVISIBLE);
-        }
-        if (b4 == view) {
+        if (b41 == view) {
             tt.setVisibility(view.INVISIBLE);
             tt1.setVisibility(view.INVISIBLE);
             tt2.setVisibility(view.INVISIBLE);
 
-            b4.setVisibility(view.INVISIBLE);
+            b41.setVisibility(view.INVISIBLE);
         }
+        Toast.makeText(getApplicationContext(), "Deleted Successfully", Toast.LENGTH_SHORT).show();
+
     }
 
     public void onaddEvent(View v)

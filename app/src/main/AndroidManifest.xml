@@ -11,7 +11,7 @@
 
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="Eventticketboooking"
+        android:label="EventTicketBooking"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -39,10 +39,10 @@
             android:value="https://parseapi.back4app.com/" />
         <meta-data
             android:name="com.parse.APPLICATION_ID"
-            android:value="LPKcRbTp0VuAIivhT2AmGov37Q5heTFO7gqpqiyK" />
+            android:value="RaNjb9jVBufoBL7eB4esGGoqU4b4NXk4IyG7rhWA" />
         <meta-data
             android:name="com.parse.CLIENT_KEY"
-            android:value="GBcwTDAfm5x9Vzw8f5OV0iVbNVIMh9X341PwO8f3" />
+            android:value="04KSrPS3k5juTNLBjz58HjDMjR1wdLl9OE29gr2p" />
 
     </application>
 

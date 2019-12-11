@@ -32,6 +32,7 @@ public class EventActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.event_activity);
 
+
         SharedPreferences sharedData = getPreferences(Context.MODE_PRIVATE);
         footballTickets= sharedData.getInt("data", 0);
         TextView vv = findViewById(R.id.numTicketsTV);
@@ -47,9 +48,13 @@ public class EventActivity extends AppCompatActivity {
         s.setAdapter(adapter);
 
 
+
+
         s.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(EventActivity.this, "You can select maximum 5 tickets", Toast.LENGTH_LONG).show();
+
                 Spinner s = findViewById(R.id.spinner);
                 TextView o = findViewById(R.id.bookedTV);
                 o.setText(s.getSelectedItem().toString());

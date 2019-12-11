@@ -52,6 +52,7 @@ public class AdminCricketBookActivity extends AppCompatActivity {
         s.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
                 Spinner s = findViewById(R.id.spinner);
                 TextView o = findViewById(R.id.bookedTV);
                 o.setText(s.getSelectedItem().toString());

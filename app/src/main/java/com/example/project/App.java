@@ -16,9 +16,9 @@ public class   App extends Application {
         super.onCreate();
 
         Parse.initialize(new Parse.Configuration.Builder(this)
-                .applicationId(getString(R.string.back4app_app_id))
+                .applicationId("RaNjb9jVBufoBL7eB4esGGoqU4b4NXk4IyG7rhWA")
                 // if defined
-                .clientKey(getString(R.string.back4app_client_key))
+                .clientKey("04KSrPS3k5juTNLBjz58HjDMjR1wdLl9OE29gr2p")
                 .server(getString(R.string.back4app_server_url))
                 .build()
         );

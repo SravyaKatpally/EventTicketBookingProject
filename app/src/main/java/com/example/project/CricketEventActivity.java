@@ -51,6 +51,8 @@ public class CricketEventActivity extends AppCompatActivity
         s.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(CricketEventActivity.this, "You can select maximum 5 tickets", Toast.LENGTH_LONG).show();
+
                 Spinner s = findViewById(R.id.spinner);
                 TextView o = findViewById(R.id.bookedTV);
                 o.setText(s.getSelectedItem().toString());

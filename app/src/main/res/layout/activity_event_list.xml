@@ -129,24 +129,6 @@
         android:text="Volleyball"
         android:textColor="#000000" />
 
-    <TextView
-        android:id="@+id/d4"
-        android:layout_width="80dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="120dp"
-        android:layout_marginTop="-15dp"
-        android:text="12/02/19"
-        android:textColor="#000000" />
-
-    <TextView
-        android:id="@+id/t4"
-        android:layout_width="80dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="220dp"
-        android:layout_marginTop="-18dp"
-        android:text="1 PM"
-        android:textColor="#000000" />
-
     <Button
         android:id="@+id/firstBTN"
         android:layout_width="80dp"
