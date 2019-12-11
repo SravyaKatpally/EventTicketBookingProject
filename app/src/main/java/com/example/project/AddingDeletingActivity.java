@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.w3c.dom.Text;
+
 public class AddingDeletingActivity extends AdminLoginActivity {
 
     public static int NAME1 =0;
@@ -26,16 +28,16 @@ public class AddingDeletingActivity extends AdminLoginActivity {
         SharedPreferences sharedData = getPreferences(Context.MODE_PRIVATE);
         name= sharedData.getString("nameText", "abc");
 
-       // Button b1 = findViewById(R.id.thirdBook);
-        Button b2 = findViewById(R.id.thirdDelete);
 
-       // b1.setVisibility(View.INVISIBLE);
-       // b2.setVisibility(View.INVISIBLE);
+        Button b2 = findViewById(R.id.thirdDelete);
 
         Button bb1 = findViewById(R.id.fd2);
         Button bb2 = findViewById(R.id.delete2);
         Button bb3 = findViewById(R.id.thirdDelete);
+        Button  b4 = findViewById(R.id.fourthDelete);
+
         bb3.setVisibility(View.INVISIBLE);
+        b4.setVisibility(View.INVISIBLE);
 
 
     }
@@ -60,6 +62,12 @@ public class AddingDeletingActivity extends AdminLoginActivity {
         TextView t32 = findViewById(R.id.Time3);
         //Button b5 = findViewById(R.id.thirdBook);
         Button b6 = findViewById(R.id.thirdDelete);
+        Button bb3 = findViewById(R.id.thirdDelete);
+        Button  b41 = findViewById(R.id.fourthDelete);
+
+        TextView tt = findViewById(R.id.event1TV);
+        TextView tt1 = findViewById(R.id.date1TV);
+        TextView tt2 = findViewById(R.id.time1TV);
 
         if (b2 == view) {
             t1.setVisibility(view.INVISIBLE);
@@ -81,6 +89,20 @@ public class AddingDeletingActivity extends AdminLoginActivity {
             t32.setVisibility(view.INVISIBLE);
             //b5.setVisibility(view.INVISIBLE);
             b6.setVisibility(view.INVISIBLE);
+        }
+        if (bb3 == view) {
+            t20.setVisibility(view.INVISIBLE);
+            t21.setVisibility(view.INVISIBLE);
+            t22.setVisibility(view.INVISIBLE);
+
+            b4.setVisibility(view.INVISIBLE);
+        }
+        if (b4 == view) {
+            tt.setVisibility(view.INVISIBLE);
+            tt1.setVisibility(view.INVISIBLE);
+            tt2.setVisibility(view.INVISIBLE);
+
+            b4.setVisibility(view.INVISIBLE);
         }
     }
 
@@ -120,33 +142,64 @@ public class AddingDeletingActivity extends AdminLoginActivity {
            // b.setVisibility(View.INVISIBLE);
         }
         if (resultCode == NAME1) {
-            SharedPreferences sharedData = getPreferences(Context.MODE_PRIVATE);
-            name = sharedData.getString("nameText", name);
-
-            Button bb1 = findViewById(R.id.fd2);
-            Button bb2 = findViewById(R.id.delete2);
-            Button bb3 = findViewById(R.id.thirdDelete);
-
-            String v = data.getStringExtra("NAME1");
-            String[] a = v.split(" ");
-            name= a[0];
-            SharedPreferences.Editor editor = sharedData.edit();
-            editor.putString("nameText", name);
-            Log.d("added", "sharedPREFERENCE");
-            editor.commit();
-
             TextView nameText = findViewById(R.id.e3);
-            nameText.setText(name);
+            if(nameText.getText().toString().equalsIgnoreCase(""))
+            {
+                SharedPreferences sharedData = getPreferences(Context.MODE_PRIVATE);
+                name = sharedData.getString("nameText", name);
+                Button bb3 = findViewById(R.id.thirdDelete);
 
-            TextView t1 = findViewById(R.id.Date3);
-            date1 = a[1];
-            t1.setText(date1);
+                String v = data.getStringExtra("NAME1");
+                String[] a = v.split(" ");
+                name = a[0];
+                SharedPreferences.Editor editor = sharedData.edit();
+                editor.putString("nameText", name);
+                Log.d("added", "sharedPREFERENCE");
+                editor.commit();
 
-            TextView t2 = findViewById(R.id.Time3);
-            time1 = a[2];
-            t2.setText(time1);
+                TextView nameText1 = findViewById(R.id.e3);
+                nameText1.setText(name);
 
-            bb3.setVisibility(View.VISIBLE);
+                TextView t1 = findViewById(R.id.Date3);
+                date1 = a[1];
+                t1.setText(date1);
+
+                TextView t2 = findViewById(R.id.Time3);
+                time1 = a[2];
+                t2.setText(time1);
+
+                bb3.setVisibility(View.VISIBLE);
+                Toast.makeText(getApplicationContext(), "Event added Successfully", Toast.LENGTH_SHORT).show();
+            }
+
+            else
+            {
+                SharedPreferences sharedData = getPreferences(Context.MODE_PRIVATE);
+                name = sharedData.getString("nameText", name);
+                Button b4 = findViewById(R.id.fourthDelete);
+
+                String v = data.getStringExtra("NAME1");
+                String[] a = v.split(" ");
+                name = a[0];
+                SharedPreferences.Editor editor = sharedData.edit();
+                editor.putString("nameText", name);
+                Log.d("added", "sharedPREFERENCE");
+                editor.commit();
+
+                TextView nameText1 = findViewById(R.id.event1TV);
+                nameText1.setText(name);
+
+                TextView t1 = findViewById(R.id.date1TV);
+                date1 = a[1];
+                t1.setText(date1);
+
+                TextView t2 = findViewById(R.id.time1TV);
+                time1 = a[2];
+                t2.setText(time1);
+
+                b4.setVisibility(View.VISIBLE);
+                Toast.makeText(getApplicationContext(), "Event added Successfully", Toast.LENGTH_SHORT).show();
+            }
 
             //bb1.setVisibility(View.VISIBLE);
             //bb2.setVisibility(View.VISIBLE);
