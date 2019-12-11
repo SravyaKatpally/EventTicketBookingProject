@@ -110,10 +110,6 @@ public class AddingDeletingActivity extends AdminLoginActivity {
     {
         Intent intent = new Intent(this, AddEventActivity.class);
         startActivityForResult(intent, 1);
-        //Button b1 = findViewById(R.id.thirdBook);
-        //Button b2 = findViewById(R.id.thirdDelete);
-        //b1.setVisibility(View.VISIBLE);
-        //b2.setVisibility(View.VISIBLE);
     }
 
     public void onBookFootball(View v)
@@ -139,7 +135,6 @@ public class AddingDeletingActivity extends AdminLoginActivity {
         if(requestCode == login)
         {
             Button b = findViewById(R.id.addevent);
-           // b.setVisibility(View.INVISIBLE);
         }
         if (resultCode == NAME1) {
             TextView nameText = findViewById(R.id.e3);
@@ -200,10 +195,6 @@ public class AddingDeletingActivity extends AdminLoginActivity {
                 b4.setVisibility(View.VISIBLE);
                 Toast.makeText(getApplicationContext(), "Event added Successfully", Toast.LENGTH_SHORT).show();
             }
-
-            //bb1.setVisibility(View.VISIBLE);
-            //bb2.setVisibility(View.VISIBLE);
-            //bb3.setVisibility(View.VISIBLE);
         }
     }
 
